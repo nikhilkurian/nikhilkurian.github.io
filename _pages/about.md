@@ -16,7 +16,7 @@ redirect_from:
 
 <h2>Recent Updates </h2> 
 
-1. I joined as a research fellow at the Australian institute for machine learning, Adelaide, Australia - Nov,2023
+1. I joined as a r post-doctoral research staff at the Australian institute for machine learning, Adelaide, Australia - Nov,2023
 2. One paper entitled "Improved Multi-Step, Multi-Variate, and Spatiotemporal 5G Data Usage Forecasting Without Deploying Data Imputation Techniques" got accepted in IEEE Globecom conference 2023. This is our first publication from Fujitsu Research India - August 2023
 3. A paper entitled "Heterogeneous graphs model spatial relationships between biological entities for breast cancer diagnosis" got accepted in MICCAI workshops - August 2023.
 4. Successfully defended my PhD thesis entitled "Cautious and Robust Deep Learning Algorithms for Medical Image Analysis", Department of Electrical Engineering, IIT Bombay - May 2023.
