@@ -16,13 +16,16 @@ redirect_from:
 
 <h2>Recent Updates </h2> 
 
-1. I joined as a post-doctoral research staff at the Australian institute for machine learning, Adelaide, Australia - Nov,2023
-2. One paper entitled "Improved Multi-Step, Multi-Variate, and Spatiotemporal 5G Data Usage Forecasting Without Deploying Data Imputation Techniques" got accepted in IEEE Globecom conference 2023. This is our first publication from Fujitsu Research India - August 2023
-3. A paper entitled "Heterogeneous graphs model spatial relationships between biological entities for breast cancer diagnosis" got accepted in MICCAI workshops - August 2023.
-4. Successfully defended my PhD thesis entitled "Cautious and Robust Deep Learning Algorithms for Medical Image Analysis", Department of Electrical Engineering, IIT Bombay - May 2023.
-5. The Journal of Pathology has recently accepted a paper titled "Multiscale deep learning framework captures systemic immune features in lymph nodes predictive of triple negative breast cancer outcome in large-scale studies." This publication is the result of collaborative efforts between our team and researchers from Kings College London, as well as other institutions representing seven different countries - April 2023.
-6. A journal entitled "Efficient Quality Control of Whole Slide Pathology Images with Human-in-the-Loop Training" has been accepted in the Journal of Pathology Informatics. Congratulations to all co-authors! - March 2023.
-7. Our paper "Improving Mitosis Detection Via UNet-based Adversarial Domain Homogenizer" won the best paper award in BIOIMAGING 2023, Lisbon Portugal. Congratulations to all co-authors - March 2023.
+1. A paper entitled "Magnification Invariant Medical Image Analysis: A Comparison of Convolutional Networks, Vision Transformers, and Token Mixers", got accepted in BIOIMAGING 2023, Rome, Italy - December 2024.
+2. Our work "WSSAMNet : Weakly Supervised Semantic Attentive medical Image Registration Network" will appear as a book chapter in "Branlesion: Giloma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries" Book by Springer Publication. -December 2023.
+3. A paper entitled "Robust Semi-Supervised Learning for Histopathology Images through Self-Supervision Guided Out-of-Distribution Scoring", got accepted in the 23rd IEEE International Conference on Bioinformatics and Bioengineering (BIBE) Conference. - November 2023.
+4. I joined as a post-doctoral research staff at the Australian institute for machine learning, Adelaide, Australia - Nov,2023
+5. One paper entitled "Improved Multi-Step, Multi-Variate, and Spatiotemporal 5G Data Usage Forecasting Without Deploying Data Imputation Techniques" got accepted in IEEE Globecom conference 2023. This is our first publication from Fujitsu Research India - August 2023
+6. A paper entitled "Heterogeneous graphs model spatial relationships between biological entities for breast cancer diagnosis" got accepted in MICCAI workshops - August 2023.
+7. Successfully defended my PhD thesis entitled "Cautious and Robust Deep Learning Algorithms for Medical Image Analysis", Department of Electrical Engineering, IIT Bombay - May 2023.
+8. The Journal of Pathology has recently accepted a paper titled "Multiscale deep learning framework captures systemic immune features in lymph nodes predictive of triple negative breast cancer outcome in large-scale studies." This publication is the result of collaborative efforts between our team and researchers from Kings College London, as well as other institutions representing seven different countries - April 2023.
+9. A journal entitled "Efficient Quality Control of Whole Slide Pathology Images with Human-in-the-Loop Training" has been accepted in the Journal of Pathology Informatics. Congratulations to all co-authors! - March 2023.
+10. Our paper "Improving Mitosis Detection Via UNet-based Adversarial Domain Homogenizer" won the best paper award in BIOIMAGING 2023, Lisbon Portugal. Congratulations to all co-authors - March 2023.
 
   
 
