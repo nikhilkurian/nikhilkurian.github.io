@@ -16,7 +16,7 @@ redirect_from:
 
 <h2>Recent Updates </h2> 
 
-1. A paper entitled "Magnification Invariant Medical Image Analysis: A Comparison of Convolutional Networks, Vision Transformers, and Token Mixers", got accepted in BIOIMAGING 2023, Rome, Italy - December 2024.
+1. A paper entitled "Magnification Invariant Medical Image Analysis: A Comparison of Convolutional Networks, Vision Transformers, and Token Mixers", got accepted in BIOIMAGING 2023, Rome, Italy - December 2023.
 2. Our work "WSSAMNet : Weakly Supervised Semantic Attentive medical Image Registration Network" will appear as a book chapter in "Branlesion: Giloma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries" Book by Springer Publication. -December 2023.
 3. A paper entitled "Robust Semi-Supervised Learning for Histopathology Images through Self-Supervision Guided Out-of-Distribution Scoring", got accepted in the 23rd IEEE International Conference on Bioinformatics and Bioengineering (BIBE) Conference. - November 2023.
 4. I joined as a post-doctoral research staff at the Australian institute for machine learning, Adelaide, Australia - Nov,2023
