@@ -84,6 +84,40 @@ $(document).ready(function(){
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
 
   // ===========================================================================
+  // Beautiful Scroll Animations
+  // ===========================================================================
+  // Adds smooth reveal animations for elements as they come into view
+  function animateOnScroll() {
+    $('.archive__item, .page__title, .author__avatar').each(function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      
+      if (elementBottom > viewportTop && elementTop < viewportBottom) {
+        $(this).addClass('animate-in');
+      }
+    });
+  }
+
+  // Run animation check on scroll and page load
+  $(window).on('scroll', animateOnScroll);
+  $(document).ready(animateOnScroll);
+
+  // ===========================================================================
+  // Enhanced Button Hover Effects
+  // ===========================================================================
+  // Adds beautiful hover effects to buttons and links
+  $('.btn, .archive__item a').hover(
+    function() {
+      $(this).addClass('hover-effect');
+    },
+    function() {
+      $(this).removeClass('hover-effect');
+    }
+  );
+
+  // ===========================================================================
   // Magnific-Popup Configuration
   // ===========================================================================
   // Configures the image lightbox popup with gallery functionality

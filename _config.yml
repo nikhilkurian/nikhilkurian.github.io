@@ -9,7 +9,7 @@
 #
 # Theme Configuration
 # ==================
-minimal_mistakes_skin    : "dark" # Available skins: "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # Available skins: "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 # =============

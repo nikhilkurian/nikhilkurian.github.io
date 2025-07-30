@@ -1,0 +1,514 @@
+// =============================================================================
+// Custom Aesthetic Enhancements for Nikhil Cherian Kurian's Website
+// =============================================================================
+
+// =============================================================================
+// Remove Green Background Completely
+// =============================================================================
+
+html {
+  background-color: #ffffff !important;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  background-color: #ffffff !important;
+  color: #2c3e50;
+}
+
+// =============================================================================
+// Enhanced Typography - Professional Colors
+// =============================================================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  color: #1a365d;
+}
+
+.page__title {
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+// =============================================================================
+// Page Title Adjustments - Smaller and Better Spaced
+// =============================================================================
+
+// Reduce page title size and add spacing for all pages except home
+.page__title {
+  font-size: 1.8em !important;
+  margin-top: 2em !important;
+  margin-bottom: 1.5em !important;
+  padding-top: 1em !important;
+}
+
+// Add extra spacing after the header for better visual separation
+.page__inner-wrap {
+  margin-top: 2em !important;
+  padding-top: 1em !important;
+}
+
+// Ensure proper spacing for page content
+.page__content {
+  margin-top: 1em !important;
+  padding-top: 0.5em !important;
+}
+
+// Add spacing to the main container
+#main {
+  margin-top: 1em !important;
+  padding-top: 1em !important;
+}
+
+// Keep home page title larger (only for home page)
+body.home .page__title,
+body[class*="home"] .page__title {
+  font-size: 2.5em !important;
+  margin-top: 1em !important;
+}
+
+// Specific styling for non-home pages
+body:not(.home) .page__title,
+body:not([class*="home"]) .page__title {
+  font-size: 1.8em !important;
+  margin-top: 2em !important;
+  padding-top: 1em !important;
+}
+
+// Add extra spacing for page headers to separate from navigation
+.page header {
+  margin-top: 2em !important;
+  padding-top: 1em !important;
+}
+
+// Ensure proper spacing for the page content area
+.page__inner-wrap {
+  margin-top: 1.5em !important;
+  padding-top: 0.5em !important;
+}
+
+// =============================================================================
+// Fix Author Avatar Display - Professional Colors
+// =============================================================================
+
+.author__avatar {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 1em;
+  
+  img {
+    max-width: 175px !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    border: 4px solid #2c5282 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block !important;
+    object-fit: cover;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(44, 82, 130, 0.3);
+    }
+  }
+}
+
+// Ensure avatar is visible in sidebar
+.sidebar .author__avatar {
+  display: block !important;
+  margin-bottom: 1.5em;
+  visibility: visible !important;
+  opacity: 1 !important;
+  
+  img {
+    max-width: 175px !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    border: 4px solid #2c5282 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+// Force avatar visibility with highest specificity
+div.author__avatar,
+div.author__avatar img,
+.sidebar div.author__avatar,
+.sidebar div.author__avatar img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: 175px !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 50% !important;
+  border: 4px solid #2c5282 !important;
+}
+
+// =============================================================================
+// Professional Header
+// =============================================================================
+
+.masthead {
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%) !important;
+  box-shadow: 0 4px 20px rgba(44, 82, 130, 0.2);
+  border-bottom: none !important;
+  
+  .masthead__inner-wrap {
+    background: transparent !important;
+    
+    .site-title {
+      color: white !important;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    .site-subtitle {
+      color: rgba(255,255,255,0.9) !important;
+    }
+  }
+}
+
+// =============================================================================
+// Professional Navigation
+// =============================================================================
+
+.greedy-nav {
+  background: transparent !important;
+  backdrop-filter: none;
+  border-bottom: none;
+  
+  .visible-links a {
+    color: white !important;
+    position: relative;
+    transition: color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    
+    &:hover {
+      color: rgba(255,255,255,0.8) !important;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: rgba(255,255,255,0.8);
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  
+  .hidden-links {
+    background: rgba(44, 82, 130, 0.95) !important;
+    border: 1px solid rgba(255,255,255,0.2);
+    
+    a {
+      color: white !important;
+      
+      &:hover {
+        background: rgba(255,255,255,0.1) !important;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// Professional Sidebar - Consistent Left Positioning
+// =============================================================================
+
+// Global sidebar positioning - Force left positioning on all pages
+.sidebar,
+#main .sidebar,
+div.sidebar,
+.sidebar__right,
+#main .sidebar__right {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2em;
+  border: 1px solid rgba(44, 82, 130, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100% !important;
+  max-width: 300px !important;
+  margin-right: 2em;
+  float: left !important;
+  position: relative !important;
+  left: 0 !important;
+  right: auto !important;
+  
+  .author__name {
+    background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    line-height: 1.3;
+  }
+  
+  .author__bio {
+    color: #4a5568;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 2em;
+    font-size: 0.95em;
+  }
+  
+  .author__urls {
+    li {
+      margin-bottom: 1em;
+      
+      a {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8em 1.2em;
+        background: linear-gradient(135deg, rgba(44, 82, 130, 0.1) 0%, rgba(26, 54, 93, 0.1) 100%);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(44, 82, 130, 0.2);
+        color: #2d3748;
+        font-size: 0.9em;
+        width: 100%;
+        justify-content: flex-start;
+        
+        &:hover {
+          background: linear-gradient(135deg, rgba(44, 82, 130, 0.2) 0%, rgba(26, 54, 93, 0.2) 100%);
+          transform: translateX(5px);
+          box-shadow: 0 5px 15px rgba(44, 82, 130, 0.2);
+          color: #2c5282;
+        }
+        
+        i {
+          margin-right: 0.8em;
+          color: #2c5282;
+          font-size: 1.1em;
+          min-width: 16px;
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// Desktop Layout - Force Sidebar on Left
+// =============================================================================
+
+@media (min-width: 57.8125em) {
+  // Main container adjustments - Force sidebar on left
+  #main {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 2em !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  // Override theme's default sidebar positioning - MORE SPECIFIC
+  .sidebar,
+  #main .sidebar,
+  div.sidebar,
+  .sidebar__right,
+  #main .sidebar__right,
+  .sidebar.sticky,
+  .sticky.sidebar {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    float: left !important;
+    margin-right: 2em !important;
+    margin-left: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    order: 1 !important;
+    clear: left !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  // Main content area - MORE SPECIFIC
+  .page,
+  article.page,
+  #main .page,
+  #main article.page {
+    flex: 1 !important;
+    width: calc(100% - 320px) !important;
+    float: right !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 0 !important;
+    position: relative !important;
+    order: 2 !important;
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  // Ensure proper container layout
+  .page__content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  // Fix any overflow issues
+  .archive {
+    margin-top: 0 !important;
+  }
+  
+  // Ensure main content starts at the top
+  .page__title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  // Remove any default margins that might push content down
+  .page__inner-wrap {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  // Override any theme defaults that might affect sidebar positioning
+  .sidebar,
+  .sidebar__right {
+    float: left !important;
+    margin-right: 2em !important;
+    margin-left: 0 !important;
+  }
+  
+  // Ensure main content doesn't interfere with sidebar
+  article.page {
+    float: right !important;
+    width: calc(100% - 320px) !important;
+  }
+  
+  // Force sidebar positioning for all page types - ULTIMATE OVERRIDE
+  #main > div:first-child {
+    float: left !important;
+    left: 0 !important;
+    right: auto !important;
+    order: 1 !important;
+  }
+  
+  // Force main content positioning for all page types - ULTIMATE OVERRIDE
+  #main > article,
+  #main > div:not(:first-child) {
+    float: right !important;
+    right: 0 !important;
+    left: auto !important;
+    order: 2 !important;
+  }
+}
+
+// =============================================================================
+// Archive Items
+// =============================================================================
+
+.archive__item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border: 1px solid rgba(44, 82, 130, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(44, 82, 130, 0.15);
+    border-color: rgba(44, 82, 130, 0.3);
+  }
+}
+
+.archive__item-title {
+  color: #1a365d;
+  font-weight: 600;
+  
+  &:hover {
+    color: #2c5282;
+  }
+}
+
+// =============================================================================
+// Enhanced Buttons
+// =============================================================================
+
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  
+  &--primary {
+    background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(44, 82, 130, 0.4);
+    }
+  }
+  
+  &--inverse {
+    background: linear-gradient(135deg, rgba(44, 82, 130, 0.1) 0%, rgba(26, 54, 93, 0.1) 100%);
+    color: #2c5282;
+    border: 1px solid rgba(44, 82, 130, 0.3);
+    
+    &:hover {
+      background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+      color: white;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// =============================================================================
+// Enhanced Links
+// =============================================================================
+
+a {
+  color: #2c5282;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: #1a365d;
+  }
+}
+
+// =============================================================================
+// Beautiful Scrollbar
+// =============================================================================
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(44, 82, 130, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  border-radius: 4px;
+  
+  &:hover {
+    background: linear-gradient(135deg, #1a365d 0%, #0f1f2d 100%);
+  }
+} 
