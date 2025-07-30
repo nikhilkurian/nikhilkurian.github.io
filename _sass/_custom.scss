@@ -676,31 +676,158 @@ a {
 }
 
 // =============================================================================
-// Responsive Design for Cards
+// Comprehensive Mobile Responsive Design
 // =============================================================================
 
+// Mobile devices (phones)
 @media (max-width: 768px) {
+  
+  // =============================================================================
+  // General Mobile Layout
+  // =============================================================================
+  
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  // =============================================================================
+  // Mobile Navigation
+  // =============================================================================
+  
+  .masthead {
+    padding: 0.5em 1em;
+    
+    .masthead__inner-wrap {
+      padding: 0.5em;
+    }
+    
+    .masthead__menu {
+      padding: 0.5em;
+    }
+    
+    .greedy-nav {
+      .site-title {
+        font-size: 1.2em;
+      }
+      
+      .visible-links {
+        display: none;
+      }
+      
+      .hidden-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(44, 82, 130, 0.95);
+        z-index: 1000;
+        padding: 1em;
+        border-radius: 0 0 8px 8px;
+      }
+    }
+  }
+  
+  // =============================================================================
+  // Mobile Sidebar Layout
+  // =============================================================================
+  
+  // Force single column layout on mobile
+  #main {
+    display: block !important;
+    flex-direction: column !important;
+    gap: 1em !important;
+  }
+  
+  // Sidebar on mobile - full width, top position
+  .sidebar,
+  #main .sidebar,
+  div.sidebar,
+  .sidebar__right,
+  #main .sidebar__right {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 0 1.5em 0 !important;
+    padding: 1.5em !important;
+    order: 1 !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    
+    .author__name {
+      font-size: 1.2em;
+      text-align: center;
+    }
+    
+    .author__bio {
+      font-size: 0.9em;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    
+    .author__urls {
+      li {
+        margin-bottom: 0.8em;
+        
+        a {
+          padding: 0.6em 1em;
+          font-size: 0.85em;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  
+  // Main content on mobile - full width
+  .page,
+  article.page,
+  #main .page,
+  #main article.page {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    order: 2 !important;
+  }
+  
+  // =============================================================================
+  // Mobile Cards
+  // =============================================================================
+  
   .about-card,
   .updates-card {
     margin-bottom: 1.5em;
+    border-radius: 8px;
     
     .card-header {
-      padding: 0.8em 1.2em;
+      padding: 1em;
       
       h2 {
         font-size: 1.1em;
         gap: 0.5em;
+        text-align: center;
       }
     }
     
     .card-content {
       padding: 1.2em;
+      
+      p {
+        font-size: 0.9em;
+        line-height: 1.6;
+      }
     }
   }
+  
+  // =============================================================================
+  // Mobile Timeline
+  // =============================================================================
   
   .updates-list .update-item {
     flex-direction: column;
     gap: 0.8em;
+    padding: 1em 0;
     
     &::before {
       display: none;
@@ -709,6 +836,8 @@ a {
     .update-date {
       align-self: flex-start;
       min-width: auto;
+      font-size: 0.75em;
+      padding: 0.3em 0.6em;
       
       &::after {
         display: none;
@@ -717,6 +846,139 @@ a {
     
     .update-text {
       padding-left: 0;
+      font-size: 0.85em;
+    }
+  }
+  
+  // =============================================================================
+  // Mobile Page Titles
+  // =============================================================================
+  
+  .page__title {
+    font-size: 1.5em !important;
+    margin-top: 1em !important;
+    padding-top: 0.5em !important;
+    text-align: center;
+  }
+  
+  // =============================================================================
+  // Mobile Typography
+  // =============================================================================
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+  
+  // =============================================================================
+  // Mobile Spacing
+  // =============================================================================
+  
+  .page__content {
+    padding: 0 1em;
+  }
+  
+  .archive__item {
+    margin-bottom: 1.5em;
+  }
+}
+
+// =============================================================================
+// Small Mobile Devices (phones under 480px)
+// =============================================================================
+
+@media (max-width: 480px) {
+  
+  body {
+    font-size: 14px;
+  }
+  
+  .masthead {
+    padding: 0.3em 0.5em;
+    
+    .greedy-nav .site-title {
+      font-size: 1.1em;
+    }
+  }
+  
+  .sidebar {
+    padding: 1em !important;
+    
+    .author__name {
+      font-size: 1.1em;
+    }
+    
+    .author__bio {
+      font-size: 0.85em;
+    }
+    
+    .author__urls li a {
+      padding: 0.5em 0.8em;
+      font-size: 0.8em;
+    }
+  }
+  
+  .about-card,
+  .updates-card {
+    .card-header {
+      padding: 0.8em;
+      
+      h2 {
+        font-size: 1em;
+      }
+    }
+    
+    .card-content {
+      padding: 1em;
+    }
+  }
+  
+  .page__title {
+    font-size: 1.3em !important;
+  }
+  
+  .updates-list .update-item {
+    .update-date {
+      font-size: 0.7em;
+      padding: 0.25em 0.5em;
+    }
+    
+    .update-text {
+      font-size: 0.8em;
+    }
+  }
+}
+
+// =============================================================================
+// Tablet Responsive Design
+// =============================================================================
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .sidebar,
+  #main .sidebar,
+  div.sidebar,
+  .sidebar__right,
+  #main .sidebar__right {
+    max-width: 280px !important;
+    padding: 1.5em !important;
+  }
+  
+  .page,
+  article.page,
+  #main .page,
+  #main article.page {
+    width: calc(100% - 300px) !important;
+  }
+  
+  .about-card,
+  .updates-card {
+    .card-header {
+      padding: 1.2em 1.5em;
+    }
+    
+    .card-content {
+      padding: 1.5em;
     }
   }
 } 
