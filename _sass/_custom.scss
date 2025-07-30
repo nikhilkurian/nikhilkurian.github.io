@@ -1054,7 +1054,7 @@ a {
 // In dark mode, adjust date color and timeline for contrast
 body.night-mode .updates-list .update-item .update-date {
   background: linear-gradient(135deg, #66d9ff 0%, #1a365d 100%) !important;
-  color: #1a1a1a !important;
+  color: #fff !important;
 }
 body.night-mode .updates-list .update-item::before {
   background: linear-gradient(180deg, #66d9ff 0%, rgba(102,217,255,0.3) 100%) !important;
