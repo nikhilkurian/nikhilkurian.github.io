@@ -109,13 +109,14 @@ body:not([class*="home"]) .page__title {
   
   img {
     max-width: 175px !important;
-    width: 100% !important;
-    height: auto !important;
+    width: 175px !important;
+    height: 175px !important;
     border-radius: 50% !important;
     border: 4px solid #2c5282 !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block !important;
     object-fit: cover;
+    object-position: center;
     
     &:hover {
       transform: scale(1.05);
@@ -133,13 +134,15 @@ body:not([class*="home"]) .page__title {
   
   img {
     max-width: 175px !important;
-    width: 100% !important;
-    height: auto !important;
+    width: 175px !important;
+    height: 175px !important;
     border-radius: 50% !important;
     border: 4px solid #2c5282 !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -152,10 +155,12 @@ div.author__avatar img,
   visibility: visible !important;
   opacity: 1 !important;
   max-width: 175px !important;
-  width: 100% !important;
-  height: auto !important;
+  width: 175px !important;
+  height: 175px !important;
   border-radius: 50% !important;
   border: 4px solid #2c5282 !important;
+  object-fit: cover !important;
+  object-position: center !important;
 }
 
 // =============================================================================
