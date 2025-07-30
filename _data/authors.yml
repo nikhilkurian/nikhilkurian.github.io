@@ -6,7 +6,10 @@ nikhil_cherian_kurian:
   name        : "Nikhil Cherian Kurian"
   uri         : "https://nikhilkurian.github.io"
   email       : "nikhilcherian30@gmail.com"
-  bio         : "Post-doctoral research staff at Australian Institute of Machine Learning (AIML), University of Adelaide. PhD in Electrical Engineering from IIT Bombay."
+  bio         : |
+    Post-doctoral research staff at Australian Institute of Machine Learning (AIML), University of Adelaide.
+    
+    PhD in Electrical Engineering from IIT Bombay.
   avatar      : "bio-photo-1.png"
   twitter     : ""
   google_plus : ""
