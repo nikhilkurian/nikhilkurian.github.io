@@ -28,32 +28,23 @@ redirect_from:
   </div>
   <div class="card-content">
     <div class="updates-list">
-
-      <div class="update-item">
-        <span class="update-date">July 2025</span>
-        <span class="update-text">Preprint of our latest work on bias in medical image analysis is now available online. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5332697" target="_blank" style="text-decoration: none; color: #2c5282; font-weight: 500;">Read the paper here</a>.</span>
-      </div>
-
-      <div class="update-item">
-        <span class="update-date">June 2025</span>
-        <span class="update-text">Check US & EP patents filled on multi-variate muti-step time series forecasting using novel deep learning methods. <a href="https://patents.google.com/patent/US20250173564A1/en" target="_blank" style="text-decoration: none; color: #2c5282; font-weight: 500;">Read the paper here</a>.</span>
-      </div>
-
-      <div class="update-item">
-        <span class="update-date">February 2025</span>
-        <span class="update-text">Our work on quantifying intra tumor heterogeneity in brest cancer whole slide images using deep learning is published as a Journal in AACR CRC</span>
-      </div>
-
-
-      <div class="update-item">
-        <span class="update-date">January 2025</span>
-        <span class="update-text">A paper entitled "Pathogen-X: A Cross-Modal Genomic Feature Trans-Align Network for Enhanced Survival Prediction from Histopathology Images", got accepted in ISBI 2025, Houston, Tx.</span>
-      </div>
-
-     
-
-
-    </div>
+  <div class="update-item">
+    <span class="update-date">July 2025</span>
+    <span class="update-text">The preprint of our latest work on bias in medical image analysis is now available online. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5332697" target="_blank" style="text-decoration: none; color: #2c5282; font-weight: 500;">Read the paper here</a>.</span>
+  </div>
+  <div class="update-item">
+    <span class="update-date">June 2025</span>
+    <span class="update-text">Check out our US & EP patents filed on multivariate, multi-step time series forecasting using novel deep learning methods. <a href="https://patents.google.com/patent/US20250173564A1/en" target="_blank" style="text-decoration: none; color: #2c5282; font-weight: 500;">Read the patent here</a>.</span>
+  </div>
+  <div class="update-item">
+    <span class="update-date">February 2025</span>
+    <span class="update-text">Our work on quantifying intra-tumor heterogeneity in breast cancer whole slide images using deep learning has been published in AACR CRC.</span>
+  </div>
+  <div class="update-item">
+    <span class="update-date">January 2025</span>
+    <span class="update-text">Our paper, "Pathogen-X: A Cross-Modal Genomic Feature Trans-Align Network for Enhanced Survival Prediction from Histopathology Images," was accepted at ISBI 2025, Houston, TX.</span>
+  </div>
+</div>
   </div>
 </div>
 
