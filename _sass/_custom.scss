@@ -345,9 +345,34 @@ body.night-mode {
     }
   }
   
-  // Main content
-  .page__content {
+  // Main content area for all pages
+  .page,
+  .page__content,
+  .archive__item {
+    background: #1a1a1a !important;
     color: #e0e0e0 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    border: 1px solid #333 !important;
+  }
+  // Links in main content
+  .page__content a,
+  .archive__item a {
+    color: #66d9ff !important;
+  }
+  .page__content a:hover,
+  .archive__item a:hover {
+    color: #fff !important;
+  }
+  // Headings in main content
+  .page__content h1,
+  .page__content h2,
+  .page__content h3,
+  .page__content h4,
+  .page__content h5,
+  .page__content h6,
+  .archive__item-title {
+    color: #fff !important;
   }
   
   // Sidebar
@@ -367,10 +392,19 @@ body.night-mode {
       color: #cccccc !important;
       
       a {
-        color: #4a9eff !important;
+        color: #66d9ff !important;
+        background: linear-gradient(135deg, rgba(102, 217, 255, 0.1) 0%, rgba(74, 158, 255, 0.1) 100%) !important;
+        border: 1px solid rgba(102, 217, 255, 0.3) !important;
         
         &:hover {
-          color: #66b3ff !important;
+          color: #ffffff !important;
+          background: linear-gradient(135deg, rgba(102, 217, 255, 0.2) 0%, rgba(74, 158, 255, 0.2) 100%) !important;
+          border-color: rgba(102, 217, 255, 0.5) !important;
+          box-shadow: 0 4px 12px rgba(102, 217, 255, 0.2) !important;
+        }
+        
+        i {
+          color: #66d9ff !important;
         }
       }
     }
@@ -395,10 +429,13 @@ body.night-mode {
         color: #e0e0e0 !important;
         
         a {
-          color: #4a9eff !important;
+          color: #66d9ff !important;
+          text-decoration: underline;
+          text-decoration-color: rgba(102, 217, 255, 0.5);
           
           &:hover {
-            color: #66b3ff !important;
+            color: #ffffff !important;
+            text-decoration-color: #66d9ff;
           }
         }
       }
@@ -421,10 +458,13 @@ body.night-mode {
       color: #e0e0e0 !important;
       
       a {
-        color: #4a9eff !important;
+        color: #66d9ff !important;
+        text-decoration: underline;
+        text-decoration-color: rgba(102, 217, 255, 0.5);
         
         &:hover {
-          color: #66b3ff !important;
+          color: #ffffff !important;
+          text-decoration-color: #66d9ff;
         }
       }
     }
@@ -432,10 +472,10 @@ body.night-mode {
   
   // Links
   a {
-    color: #4a9eff !important;
+    color: #66d9ff !important;
     
     &:hover {
-      color: #66b3ff !important;
+      color: #ffffff !important;
     }
   }
   
@@ -454,7 +494,7 @@ body.night-mode {
     border: 1px solid #444 !important;
     
     #avatarModalName {
-      color: #4a9eff !important;
+      color: #66d9ff !important;
     }
   }
   
@@ -462,7 +502,7 @@ body.night-mode {
     color: #cccccc !important;
     
     &:hover {
-      color: #4a9eff !important;
+      color: #66d9ff !important;
     }
   }
   
@@ -477,6 +517,20 @@ body.night-mode {
       border-color: rgba(255, 255, 255, 0.5) !important;
     }
   }
+  // Avatar border in dark mode (force white)
+  .sidebar .author__avatar img,
+  div.author__avatar img,
+  .sidebar div.author__avatar img {
+    border-color: #fff !important;
+  }
+}
+
+body.night-mode .sidebar .author__name {
+  color: #fff !important;
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
 }
 
 // =============================================================================
@@ -1302,4 +1356,32 @@ a {
       padding: 1.5em;
     }
   }
+} 
+
+// Force all main content headings to be solid white in dark mode, removing any gradient or text-fill
+body.night-mode .page__content h1,
+body.night-mode .page__content h2,
+body.night-mode .page__content h3,
+body.night-mode .page__content h4,
+body.night-mode .page__content h5,
+body.night-mode .page__content h6,
+body.night-mode .page h1,
+body.night-mode .page h2,
+body.night-mode .page h3,
+body.night-mode .page h4,
+body.night-mode .page h5,
+body.night-mode .page h6 {
+  color: #fff !important;
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+} 
+
+body.night-mode .page__title {
+  color: #fff !important;
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
 } 

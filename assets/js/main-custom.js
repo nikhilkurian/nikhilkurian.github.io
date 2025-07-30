@@ -199,11 +199,14 @@ $(document).ready(function(){
   
   // Night mode toggle function
   function toggleNightMode() {
+    console.log('toggleNightMode function called');
     const body = document.body;
     const isNightMode = body.classList.contains('night-mode');
+    console.log('Current night mode state:', isNightMode);
     
     if (isNightMode) {
       // Switch to light mode
+      console.log('Switching to light mode');
       body.classList.remove('night-mode');
       if (nightModeIconSidebar) {
         nightModeIconSidebar.className = 'fas fa-moon';
@@ -211,17 +214,25 @@ $(document).ready(function(){
       localStorage.setItem('nightMode', 'light');
     } else {
       // Switch to dark mode
+      console.log('Switching to dark mode');
       body.classList.add('night-mode');
       if (nightModeIconSidebar) {
         nightModeIconSidebar.className = 'fas fa-sun';
       }
       localStorage.setItem('nightMode', 'dark');
     }
+    console.log('Night mode toggle completed');
   }
   
   // Add click event listener to sidebar toggle button
   if (nightModeToggleSidebar) {
-    nightModeToggleSidebar.addEventListener('click', toggleNightMode);
+    console.log('Night mode toggle button found');
+    nightModeToggleSidebar.addEventListener('click', function() {
+      console.log('Night mode button clicked');
+      toggleNightMode();
+    });
+  } else {
+    console.log('Night mode toggle button NOT found');
   }
   
   // Add keyboard shortcut (Ctrl/Cmd + Shift + D)
