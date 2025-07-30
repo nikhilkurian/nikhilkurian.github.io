@@ -1,22 +1,24 @@
 {
-  "name": "minimal-mistakes",
-  "version": "3.4.2",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "name": "nikhil-cherian-kurian-website",
+  "version": "1.0.0",
+  "description": "Academic website for Nikhil Cherian Kurian - Post-doctoral researcher at AIML, University of Adelaide",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/nikhilkurian/nikhilkurian.github.io.git"
   },
   "keywords": [
     "jekyll",
-    "theme",
-    "minimal"
+    "academic",
+    "research",
+    "machine-learning",
+    "medical-imaging"
   ],
-  "author": "Michael Rose",
+  "author": "Nikhil Cherian Kurian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/nikhilkurian/nikhilkurian.github.io/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://nikhilkurian.github.io/",
   "engines": {
     "node": ">= 0.10.0"
   },

@@ -1,11 +1,18 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
+# =============================================================================
+# Jekyll Configuration File for Nikhil Cherian Kurian's Academic Website
+# =============================================================================
+# 
+# This config file contains settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
+#
+# Theme Configuration
+# ==================
+minimal_mistakes_skin    : "dark" # Available skins: "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum", "sunrise"
+
 # Site Settings
+# =============
 locale                   : "en-US"
 title                    : "Nikhil Cherian Kurian"
 title_separator          : "-"
@@ -78,25 +85,27 @@ analytics:
     tracking_id          : 
 
 
-# Site Author
+# Site Author Configuration
+# ========================
+# This section contains all the author information displayed throughout the site
 author:
-  name             : "Nikhil Kurian"
+  name             : "Nikhil Cherian Kurian"
   avatar           : "bio-photo-1.png"
-  bio              : "Researcher, AIML"
+  bio              : "Post-doctoral research staff at Australian Institute of Machine Learning (AIML), University of Adelaide. PhD in Electrical Engineering from IIT Bombay."
   location         : "Adelaide, Australia"
-  employer         : 
+  employer         : "Australian Institute of Machine Learning, University of Adelaide"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=5oEir04AAAAJ&hl=en"
   email            : "nikhilcherian30@gmail.com"
-  researchgate     :  "https://www.researchgate.net/profile/Nikhil_Kurian2"
-  uri              :
+  researchgate     : "https://www.researchgate.net/profile/Nikhil_Kurian2"
+  uri              : "https://nikhilkurian.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "/nikhilkurian"
+  github           : "nikhilkurian"
   google_plus      :
   keybase          :
   instagram        :

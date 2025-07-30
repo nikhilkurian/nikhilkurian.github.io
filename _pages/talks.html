@@ -5,11 +5,22 @@ permalink: /talks/
 author_profile: true
 ---
 
+{% comment %}
+  =============================================================================
+  Talks and Presentations Page
+  =============================================================================
+  
+  This page displays all talks and presentations from the _talks collection.
+  Talks are displayed in reverse chronological order (newest first).
+  =============================================================================
+{% endcomment %}
+
+{% comment %}Talk map functionality (currently disabled){% endcomment %}
 {% if site.talkmap_link == true %}
-
-
+  {% comment %}Talk map would be included here{% endcomment %}
 {% endif %}
 
+{% comment %}Loop through all talks in reverse chronological order{% endcomment %}
 {% for post in site.talks reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}

@@ -1,18 +1,18 @@
-# Authors
+# Authors configuration for the website
+# This file contains author information used throughout the site
 
-Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+# Main author - Nikhil Cherian Kurian
+nikhil_cherian_kurian:
+  name        : "Nikhil Cherian Kurian"
+  uri         : "https://nikhilkurian.github.io"
+  email       : "nikhilcherian30@gmail.com"
+  bio         : "Post-doctoral research staff at Australian Institute of Machine Learning (AIML), University of Adelaide. PhD in Electrical Engineering from IIT Bombay."
+  avatar      : "bio-photo-1.png"
+  twitter     : ""
+  google_plus : ""
+  location    : "Adelaide, Australia"
+  employer    : "Australian Institute of Machine Learning, University of Adelaide"
+  googlescholar: "https://scholar.google.com/citations?user=5oEir04AAAAJ&hl=en"
+  researchgate: "https://www.researchgate.net/profile/Nikhil_Kurian2"
+  linkedin    : "nikhil-cherian-kurian-7bba285b"
+  github      : "nikhilkurian"

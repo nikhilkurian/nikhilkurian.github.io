@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* <b>Ph.D</b> in Electrical Engineering, Indian Institute of Technology Bombay, 2019 (expected)
+* <b>Ph.D</b> in Electrical Engineering, Indian Institute of Technology Bombay, 2023
 * <b>B.Tech.</b> in Electronics and Communication Engineering, Dr. M.G.R. Educational and Research Institute Chennai, 2012
 
 Publications
@@ -22,14 +22,23 @@ Publications
   
 Work experience
 ======
-* <b> Lab Administrator 2014-19: Lab Administrator </b>
+* <b>Post-doctoral Research Staff (2023-Present)</b>
+  * Australian Institute of Machine Learning (AIML), University of Adelaide
+  * Research focus: Machine learning and artificial intelligence applications
+
+* <b>Senior AI Researcher (2023)</b>
+  * Fujitsu Research of India Pvt Ltd (FRIPL)
+  * Research and development in artificial intelligence
+
+* <b>Lab Administrator (2014-2019)</b>
   * Indian Institute of Technology Bombay
   * Duties included: 
     * Building deep learning servers
     * Tutorials on PyTorch, TensorFlow, Python and GitHub
     * Tutorials on best coding practices
-   * Supervisor: Professor Amit Sethi
-* <b> Project Staff 2012-13: Project Assistant </b>
+  * Supervisor: Professor Amit Sethi
+
+* <b>Project Staff (2012-2013)</b>
   * Indian Institute of Technology Hyderabad
   * Duties included:
     * Development of Piezo-electric sensor

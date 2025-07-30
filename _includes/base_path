@@ -1,3 +1,15 @@
+{% comment %}
+  =============================================================================
+  Base Path Include for Jekyll Site
+  =============================================================================
+  
+  This include file sets up the base URL for the site. It checks if a custom
+  site.url is configured, and if not, falls back to the GitHub Pages URL.
+  
+  Usage: {% include base_path %}
+  =============================================================================
+{% endcomment %}
+
 {% if site.url %}
   {% assign base_path = site.url | append: site.baseurl %}
 {% else %}

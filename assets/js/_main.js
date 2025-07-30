@@ -1,9 +1,20 @@
-/* ==========================================================================
-   jQuery plugin settings and other scripts
-   ========================================================================== */
+/* =============================================================================
+   jQuery plugin settings and other scripts for Minimal Mistakes Jekyll Theme
+   =============================================================================
+   
+   This file contains all the JavaScript functionality for the website including:
+   - Sticky footer implementation
+   - Responsive navigation
+   - Image popup functionality
+   - Smooth scrolling
+   - Sidebar behavior
+   ============================================================================= */
 
 $(document).ready(function(){
-   // Sticky footer
+   // ===========================================================================
+   // Sticky Footer Implementation
+   // ===========================================================================
+   // Ensures the footer stays at the bottom of the page even when content is short
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
     },
@@ -23,22 +34,23 @@ $(document).ready(function(){
   // FitVids init
   $("#main").fitVids();
 
-  // init sticky sidebar
+  // ===========================================================================
+  // Sticky Sidebar Implementation
+  // ===========================================================================
+  // Handles the sticky behavior of the author sidebar on desktop and mobile
   $(".sticky").Stickyfill();
 
   var stickySideBar = function(){
+    // Determine if sidebar should be shown based on screen size and button visibility
     var show = $(".author__urls-wrapper button").length === 0 ? $(window).width() > 1024 : !$(".author__urls-wrapper button").is(":visible");
-    // console.log("has button: " + $(".author__urls-wrapper button").length === 0);
-    // console.log("Window Width: " + windowWidth);
-    // console.log("show: " + show);
-    //old code was if($(window).width() > 1024)
+    
     if (show) {
-      // fix
+      // Enable sticky sidebar for desktop view
       Stickyfill.rebuild();
       Stickyfill.init();
       $(".author__urls").show();
     } else {
-      // unfix
+      // Disable sticky sidebar for mobile view
       Stickyfill.stop();
       $(".author__urls").hide();
     }
@@ -50,49 +62,52 @@ $(document).ready(function(){
     stickySideBar();
   });
 
-  // Follow menu drop down
-
+  // ===========================================================================
+  // Mobile Navigation Menu
+  // ===========================================================================
+  // Handles the dropdown behavior of the author links on mobile devices
   $(".author__urls-wrapper button").on("click", function() {
     $(".author__urls").fadeToggle("fast", function() {});
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
-  // init smooth scroll
+  // ===========================================================================
+  // Smooth Scrolling
+  // ===========================================================================
+  // Enables smooth scrolling for all anchor links with a 20px offset
   $("a").smoothScroll({offset: -20});
 
-  // add lightbox class to all image links
+  // ===========================================================================
+  // Image Lightbox Setup
+  // ===========================================================================
+  // Adds lightbox functionality to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
 
-  // Magnific-Popup options
+  // ===========================================================================
+  // Magnific-Popup Configuration
+  // ===========================================================================
+  // Configures the image lightbox popup with gallery functionality
   $(".image-popup").magnificPopup({
-    // disableOn: function() {
-    //   if( $(window).width() < 500 ) {
-    //     return false;
-    //   }
-    //   return true;
-    // },
     type: 'image',
     tLoading: 'Loading image #%curr%...',
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0,1] // Preload 0 - before current, and 1 after the current image
     },
     image: {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
     },
     removalDelay: 500, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open.
-    // make it unique to apply your CSS animations just to this exact popup
-    mainClass: 'mfp-zoom-in',
+    mainClass: 'mfp-zoom-in', // CSS class for zoom-in animation
     callbacks: {
       beforeOpen: function() {
-        // just a hack that adds mfp-anim class to markup
+        // Add animation class to popup markup
         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
       }
     },
     closeOnContentClick: true,
-    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    midClick: true // Allow opening popup on middle mouse click
   });
 
 });

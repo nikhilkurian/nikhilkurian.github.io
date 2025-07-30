@@ -5,10 +5,20 @@ permalink: /resources/
 author_profile: true
 ---
 
+{% comment %}
+  =============================================================================
+  Resources Page
+  =============================================================================
+  
+  This page displays resources and tools from the _portfolio collection.
+  These are typically useful resources, tools, or projects that may be
+  helpful to others in the field.
+  =============================================================================
+{% endcomment %}
+
 {% include base_path %}
 
-
+{% comment %}Loop through all portfolio items (resources){% endcomment %}
 {% for post in site.portfolio %}
   {% include archive-single.html %}
 {% endfor %}
-

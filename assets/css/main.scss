@@ -2,40 +2,68 @@
 ---
 
 /*
- *    Minimal Mistakes Jekyll Theme
+ * =============================================================================
+ * Minimal Mistakes Jekyll Theme - Main Stylesheet
+ * =============================================================================
  *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
+ * This file imports all the necessary SCSS files for the Minimal Mistakes theme
+ * and organizes them in a logical order for proper cascading.
  *
+ * Author: Michael Rose
+ * Website: mademistakes.com
+ * Twitter: https://twitter.com/mmistakes
+ *
+ * =============================================================================
 */
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
-@import "variables";
-@import "mixins";
-@import "vendor/susy/susy";
+// =============================================================================
+// Vendor Libraries and Dependencies
+// =============================================================================
+@import "vendor/breakpoint/breakpoint"; // Media query mixins for responsive design
+@import "variables";                    // Global SCSS variables and settings
+@import "mixins";                       // Reusable SCSS mixins
+@import "vendor/susy/susy";             // CSS Grid system
 
-@import "reset";
-@import "base";
+// =============================================================================
+// Base Styles and Reset
+// =============================================================================
+@import "reset";                        // CSS reset and base styles
+@import "base";                         // Base typography and layout
 
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
+// =============================================================================
+// Component Styles
+// =============================================================================
+@import "utilities";                    // Utility classes and helpers
+@import "animations";                   // CSS animations and transitions
+@import "tables";                       // Table styling
+@import "buttons";                      // Button components
+@import "notices";                      // Notice and alert components
+@import "masthead";                     // Site header and masthead
+@import "navigation";                   // Navigation menu styles
+@import "footer";                       // Site footer
+@import "syntax";                       // Code syntax highlighting
 
-@import "forms";
+// =============================================================================
+// Form Elements
+// =============================================================================
+@import "forms";                        // Form styling
 
-@import "page";
-@import "archive";
-@import "sidebar";
+// =============================================================================
+// Page Layouts
+// =============================================================================
+@import "page";                         // Individual page layouts
+@import "archive";                      // Archive and listing pages
+@import "sidebar";                      // Sidebar components
 
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
+// =============================================================================
+// Third-party Libraries
+// =============================================================================
+@import "vendor/font-awesome/fontawesome";    // Font Awesome icons
+@import "vendor/font-awesome/solid";          // Font Awesome solid icons
+@import "vendor/font-awesome/brands";         // Font Awesome brand icons
+@import "vendor/magnific-popup/magnific-popup"; // Image lightbox popup
+
+// =============================================================================
+// Print Styles
+// =============================================================================
+@import "print";                        // Print-specific styles

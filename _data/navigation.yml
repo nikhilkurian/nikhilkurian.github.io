@@ -1,16 +1,14 @@
-# main links links
+# Main navigation links for the website
+# Each entry should have a title and corresponding URL
 main:
   - title: "Publications"
     url: /publications/
 
   - title: "CV"
-    url: /resume/
+    url: /cv/
     
   - title: "Talks & Presentations"
     url: /talks/    
        
   - title: "Resources"
     url: /resources/
-    
-
-    
