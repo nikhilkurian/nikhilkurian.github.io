@@ -144,4 +144,40 @@ $(document).ready(function(){
     midClick: true // Allow opening popup on middle mouse click
   });
 
+  // ===========================================================================
+  // Avatar Modal Functionality
+  // ===========================================================================
+  // Handles the avatar modal popup functionality
+  
+  // Global function to open avatar modal
+  window.openAvatarModal = function(imageSrc, name) {
+    document.getElementById('avatarModalImg').src = imageSrc;
+    document.getElementById('avatarModalImg').alt = name;
+    document.getElementById('avatarModalName').textContent = name;
+    document.getElementById('avatarModal').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  };
+
+  // Close modal when clicking the close button
+  $('.avatar-modal-close').on('click', function() {
+    document.getElementById('avatarModal').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+  });
+
+  // Close modal when clicking outside the modal content
+  $('.avatar-modal').on('click', function(e) {
+    if (e.target === this) {
+      document.getElementById('avatarModal').style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+  });
+
+  // Close modal with Escape key
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('avatarModal').style.display === 'block') {
+      document.getElementById('avatarModal').style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+  });
+
 });

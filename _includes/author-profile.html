@@ -8,9 +8,9 @@
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
+    	<img src="{{ author.avatar }}" alt="{{ author.name }}" class="avatar-clickable" onclick="openAvatarModal('{{ author.avatar }}', '{{ author.name }}')">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
+    	<img src="{{ author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ author.name }}" class="avatar-clickable" onclick="openAvatarModal('{{ author.avatar | prepend: '/images/' | prepend: base_path }}', '{{ author.name }}')">
     {% endif %}
   </div>
 
@@ -119,5 +119,14 @@
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
 {% endif %}
     </ul>
+  </div>
+</div>
+
+<!-- Avatar Modal -->
+<div id="avatarModal" class="avatar-modal">
+  <div class="avatar-modal-content">
+    <span class="avatar-modal-close">&times;</span>
+    <img id="avatarModalImg" src="" alt="">
+    <p id="avatarModalName"></p>
   </div>
 </div>
