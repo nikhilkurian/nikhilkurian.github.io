@@ -28,55 +28,31 @@ redirect_from:
   </div>
   <div class="card-content">
     <div class="updates-list">
+
       <div class="update-item">
-        <span class="update-date">December 2023</span>
-        <span class="update-text">A paper entitled "Magnification Invariant Medical Image Analysis: A Comparison of Convolutional Networks, Vision Transformers, and Token Mixers", got accepted in BIOIMAGING 2023, Rome, Italy.</span>
+        <span class="update-date">July 2025</span>
+        <span class="update-text">Preprint of our latest work on bias in medical image analysis is now available online. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5332697" target="_blank" style="text-decoration: none; color: #2c5282; font-weight: 500;">Read the paper here</a>.</span>
       </div>
-      
+
       <div class="update-item">
-        <span class="update-date">December 2023</span>
-        <span class="update-text">Our work "WSSAMNet : Weakly Supervised Semantic Attentive medical Image Registration Network" will appear as a book chapter in "Branlesion: Giloma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries" Book by Springer Publication.</span>
+        <span class="update-date">June 2025</span>
+        <span class="update-text">Check US & EP patents filled on multi-variate muti-step time series forecasting using novel deep learning methods. <a href="https://patents.google.com/patent/US20250173564A1/en" target="_blank" style="text-decoration: none; color: #2c5282; font-weight: 500;">Read the paper here</a>.</span>
       </div>
-      
+
       <div class="update-item">
-        <span class="update-date">November 2023</span>
-        <span class="update-text">A paper entitled "Robust Semi-Supervised Learning for Histopathology Images through Self-Supervision Guided Out-of-Distribution Scoring", got accepted in the 23rd IEEE International Conference on Bioinformatics and Bioengineering (BIBE) Conference.</span>
+        <span class="update-date">February 2025</span>
+        <span class="update-text">Our work on quantifying intra tumor heterogeneity in brest cancer whole slide images using deep learning is published as a Journal in AACR CRC</span>
       </div>
-      
+
+
       <div class="update-item">
-        <span class="update-date">November 2023</span>
-        <span class="update-text">I joined as a post-doctoral research staff at the Australian institute for machine learning, Adelaide, Australia.</span>
+        <span class="update-date">January 2025</span>
+        <span class="update-text">A paper entitled "Pathogen-X: A Cross-Modal Genomic Feature Trans-Align Network for Enhanced Survival Prediction from Histopathology Images", got accepted in ISBI 2025, Houston, Tx.</span>
       </div>
-      
-      <div class="update-item">
-        <span class="update-date">August 2023</span>
-        <span class="update-text">One paper entitled "Improved Multi-Step, Multi-Variate, and Spatiotemporal 5G Data Usage Forecasting Without Deploying Data Imputation Techniques" got accepted in IEEE Globecom conference 2023. This is our first publication from Fujitsu Research India.</span>
-      </div>
-      
-      <div class="update-item">
-        <span class="update-date">August 2023</span>
-        <span class="update-text">A paper entitled "Heterogeneous graphs model spatial relationships between biological entities for breast cancer diagnosis" got accepted in MICCAI workshops.</span>
-      </div>
-      
-      <div class="update-item">
-        <span class="update-date">May 2023</span>
-        <span class="update-text">Successfully defended my PhD thesis entitled "Cautious and Robust Deep Learning Algorithms for Medical Image Analysis", Department of Electrical Engineering, IIT Bombay.</span>
-      </div>
-      
-      <div class="update-item">
-        <span class="update-date">April 2023</span>
-        <span class="update-text">The Journal of Pathology has recently accepted a paper titled "Multiscale deep learning framework captures systemic immune features in lymph nodes predictive of triple negative breast cancer outcome in large-scale studies." This publication is the result of collaborative efforts between our team and researchers from Kings College London, as well as other institutions representing seven different countries.</span>
-      </div>
-      
-      <div class="update-item">
-        <span class="update-date">March 2023</span>
-        <span class="update-text">A journal entitled "Efficient Quality Control of Whole Slide Pathology Images with Human-in-the-Loop Training" has been accepted in the Journal of Pathology Informatics. Congratulations to all co-authors!</span>
-      </div>
-      
-      <div class="update-item">
-        <span class="update-date">March 2023</span>
-        <span class="update-text">Our paper "Improving Mitosis Detection Via UNet-based Adversarial Domain Homogenizer" won the best paper award in BIOIMAGING 2023, Lisbon Portugal. Congratulations to all co-authors.</span>
-      </div>
+
+     
+
+
     </div>
   </div>
 </div>
