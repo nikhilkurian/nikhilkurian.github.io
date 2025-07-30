@@ -251,111 +251,71 @@ div.author__avatar img,
 }
 
 // =============================================================================
-// Night Mode Toggle Button
+// Night Mode Toggle - Sidebar
 // =============================================================================
 
-.night-mode-toggle {
-  display: flex !important;
-  align-items: center;
-  margin-left: 1em;
-  position: relative;
-  z-index: 9999 !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+.night-mode-section {
+  margin-top: 1.5em;
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(44, 82, 130, 0.1);
 }
 
-.night-mode-btn {
-  background: #ffffff !important;
-  border: 3px solid #ffffff !important;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex !important;
+.night-mode-toggle-sidebar {
+  display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #2c5282 !important;
-  font-size: 1.2em;
-  position: relative;
-  z-index: 10000 !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  
-  &:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
-    border-color: rgba(255, 255, 255, 0.7) !important;
-    transform: scale(1.1);
-  }
-  
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-  }
 }
 
-// Text-based night mode button as backup
-.night-mode-btn-text {
-  background: #ffffff !important;
-  border: 2px solid #2c5282 !important;
-  border-radius: 20px !important;
-  padding: 8px 16px !important;
-  display: inline-block !important;
+.night-mode-btn-sidebar {
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  border: 2px solid #2c5282;
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #2c5282 !important;
-  font-size: 0.9em !important;
-  font-weight: 600 !important;
-  margin-left: 1em !important;
-  position: relative;
-  z-index: 10000 !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 600;
+  width: 100%;
+  max-width: 200px;
   
   &:hover {
-    background: #2c5282 !important;
-    color: #ffffff !important;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
   }
   
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.3);
   }
-}
-
-// Fallback icon for night mode toggle
-.fallback-icon {
-  display: none;
-  font-size: 1.2em;
-}
-
-// Show fallback icon if Font Awesome fails to load
-.night-mode-btn:not(:has(.fas)) .fallback-icon {
-  display: block !important;
-}
-
-// Ensure the button is always visible
-.greedy-nav .night-mode-toggle {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  margin-left: 1em;
-  margin-right: 0.5em;
-  position: relative !important;
-  z-index: 9999 !important;
-}
-
-// Force the button to be on top of everything
-.greedy-nav {
-  position: relative;
   
-  .night-mode-toggle {
-    position: static !important;
-    display: inline-block !important;
-    margin-left: 1em !important;
-    margin-right: 0.5em !important;
-    z-index: 10000 !important;
+  i {
+    font-size: 1em;
+    transition: transform 0.3s ease;
+  }
+  
+  .night-mode-text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+}
+
+// Night mode active state
+body.night-mode .night-mode-btn-sidebar {
+  background: linear-gradient(135deg, #4a9eff 0%, #3a7bd5 100%);
+  border-color: #4a9eff;
+  
+  &:hover {
+    background: linear-gradient(135deg, #3a7bd5 0%, #4a9eff 100%);
+  }
+  
+  i {
+    transform: rotate(180deg);
   }
 }
 

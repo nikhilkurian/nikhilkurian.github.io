@@ -186,13 +186,15 @@ $(document).ready(function(){
   
   // Check for saved night mode preference or default to light mode
   const currentTheme = localStorage.getItem('nightMode') || 'light';
-  const nightModeToggle = document.getElementById('nightModeToggle');
-  const nightModeIcon = document.getElementById('nightModeIcon');
+  const nightModeToggleSidebar = document.getElementById('nightModeToggleSidebar');
+  const nightModeIconSidebar = document.getElementById('nightModeIconSidebar');
   
   // Apply saved theme on page load
   if (currentTheme === 'dark') {
     document.body.classList.add('night-mode');
-    nightModeIcon.className = 'fas fa-sun';
+    if (nightModeIconSidebar) {
+      nightModeIconSidebar.className = 'fas fa-sun';
+    }
   }
   
   // Night mode toggle function
@@ -203,25 +205,23 @@ $(document).ready(function(){
     if (isNightMode) {
       // Switch to light mode
       body.classList.remove('night-mode');
-      nightModeIcon.className = 'fas fa-moon';
+      if (nightModeIconSidebar) {
+        nightModeIconSidebar.className = 'fas fa-moon';
+      }
       localStorage.setItem('nightMode', 'light');
     } else {
       // Switch to dark mode
       body.classList.add('night-mode');
-      nightModeIcon.className = 'fas fa-sun';
+      if (nightModeIconSidebar) {
+        nightModeIconSidebar.className = 'fas fa-sun';
+      }
       localStorage.setItem('nightMode', 'dark');
     }
   }
   
-  // Add click event listener to toggle button
-  if (nightModeToggle) {
-    nightModeToggle.addEventListener('click', toggleNightMode);
-  }
-  
-  // Add click event listener to text toggle button
-  const nightModeToggleText = document.getElementById('nightModeToggleText');
-  if (nightModeToggleText) {
-    nightModeToggleText.addEventListener('click', toggleNightMode);
+  // Add click event listener to sidebar toggle button
+  if (nightModeToggleSidebar) {
+    nightModeToggleSidebar.addEventListener('click', toggleNightMode);
   }
   
   // Add keyboard shortcut (Ctrl/Cmd + Shift + D)
