@@ -1385,3 +1385,7 @@ body.night-mode .page__title {
   -webkit-background-clip: initial !important;
   background-clip: initial !important;
 } 
+
+body.night-mode .updates-list .update-item::before {
+  background: linear-gradient(180deg, #66d9ff 0%, rgba(102,217,255,0.3) 100%) !important;
+} 
