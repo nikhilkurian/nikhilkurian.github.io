@@ -218,6 +218,12 @@ $(document).ready(function(){
     nightModeToggle.addEventListener('click', toggleNightMode);
   }
   
+  // Add click event listener to text toggle button
+  const nightModeToggleText = document.getElementById('nightModeToggleText');
+  if (nightModeToggleText) {
+    nightModeToggleText.addEventListener('click', toggleNightMode);
+  }
+  
   // Add keyboard shortcut (Ctrl/Cmd + Shift + D)
   $(document).on('keydown', function(e) {
     if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
