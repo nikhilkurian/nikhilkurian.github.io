@@ -259,12 +259,14 @@ div.author__avatar img,
   align-items: center;
   margin-left: 1em;
   position: relative;
-  z-index: 1000;
+  z-index: 9999 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .night-mode-btn {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  border: 3px solid rgba(255, 255, 255, 0.8) !important;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -276,7 +278,9 @@ div.author__avatar img,
   color: white !important;
   font-size: 1.2em;
   position: relative;
-  z-index: 1001;
+  z-index: 10000 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   
   &:hover {
     background: rgba(255, 255, 255, 0.3) !important;
@@ -308,6 +312,21 @@ div.author__avatar img,
   opacity: 1 !important;
   margin-left: 1em;
   margin-right: 0.5em;
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+// Force the button to be on top of everything
+.greedy-nav {
+  position: relative;
+  
+  .night-mode-toggle {
+    position: absolute !important;
+    right: 60px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10000 !important;
+  }
 }
 
 // =============================================================================
