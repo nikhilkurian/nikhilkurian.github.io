@@ -180,4 +180,50 @@ $(document).ready(function(){
     }
   });
 
+  // ===========================================================================
+  // Night Mode Toggle Functionality
+  // ===========================================================================
+  
+  // Check for saved night mode preference or default to light mode
+  const currentTheme = localStorage.getItem('nightMode') || 'light';
+  const nightModeToggle = document.getElementById('nightModeToggle');
+  const nightModeIcon = document.getElementById('nightModeIcon');
+  
+  // Apply saved theme on page load
+  if (currentTheme === 'dark') {
+    document.body.classList.add('night-mode');
+    nightModeIcon.className = 'fas fa-sun';
+  }
+  
+  // Night mode toggle function
+  function toggleNightMode() {
+    const body = document.body;
+    const isNightMode = body.classList.contains('night-mode');
+    
+    if (isNightMode) {
+      // Switch to light mode
+      body.classList.remove('night-mode');
+      nightModeIcon.className = 'fas fa-moon';
+      localStorage.setItem('nightMode', 'light');
+    } else {
+      // Switch to dark mode
+      body.classList.add('night-mode');
+      nightModeIcon.className = 'fas fa-sun';
+      localStorage.setItem('nightMode', 'dark');
+    }
+  }
+  
+  // Add click event listener to toggle button
+  if (nightModeToggle) {
+    nightModeToggle.addEventListener('click', toggleNightMode);
+  }
+  
+  // Add keyboard shortcut (Ctrl/Cmd + Shift + D)
+  $(document).on('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
+      e.preventDefault();
+      toggleNightMode();
+    }
+  });
+
 });

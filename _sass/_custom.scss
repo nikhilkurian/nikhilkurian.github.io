@@ -251,6 +251,202 @@ div.author__avatar img,
 }
 
 // =============================================================================
+// Night Mode Toggle Button
+// =============================================================================
+
+.night-mode-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.night-mode-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.1em;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+}
+
+// =============================================================================
+// Night Mode Styles
+// =============================================================================
+
+body.night-mode {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+  
+  // Header and navigation
+  .masthead {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    border-bottom: 1px solid #333 !important;
+  }
+  
+  .greedy-nav {
+    background: transparent !important;
+    
+    .visible-links a {
+      color: #e0e0e0 !important;
+      
+      &:hover {
+        color: #ffffff !important;
+      }
+    }
+  }
+  
+  // Main content
+  .page__content {
+    color: #e0e0e0 !important;
+  }
+  
+  // Sidebar
+  .sidebar {
+    background-color: #2d2d2d !important;
+    border-right: 1px solid #333 !important;
+    
+    .author__name {
+      color: #ffffff !important;
+    }
+    
+    .author__bio {
+      color: #cccccc !important;
+    }
+    
+    .author__urls li {
+      color: #cccccc !important;
+      
+      a {
+        color: #4a9eff !important;
+        
+        &:hover {
+          color: #66b3ff !important;
+        }
+      }
+    }
+  }
+  
+  // Cards
+  .about-card,
+  .updates-card {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    
+    .card-header {
+      background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%) !important;
+      border-bottom: 1px solid #444 !important;
+    }
+    
+    .card-content {
+      color: #e0e0e0 !important;
+      
+      p {
+        color: #e0e0e0 !important;
+        
+        a {
+          color: #4a9eff !important;
+          
+          &:hover {
+            color: #66b3ff !important;
+          }
+        }
+      }
+    }
+  }
+  
+  // Updates list
+  .updates-list .update-item {
+    border-bottom: 1px solid #444 !important;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .update-date {
+      background: linear-gradient(135deg, #4a9eff 0%, #3a7bd5 100%) !important;
+    }
+    
+    .update-text {
+      color: #e0e0e0 !important;
+      
+      a {
+        color: #4a9eff !important;
+        
+        &:hover {
+          color: #66b3ff !important;
+        }
+      }
+    }
+  }
+  
+  // Links
+  a {
+    color: #4a9eff !important;
+    
+    &:hover {
+      color: #66b3ff !important;
+    }
+  }
+  
+  // Headings
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+  }
+  
+  // Avatar modal
+  .avatar-modal {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  .avatar-modal-content {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444 !important;
+    
+    #avatarModalName {
+      color: #4a9eff !important;
+    }
+  }
+  
+  .avatar-modal-close {
+    color: #cccccc !important;
+    
+    &:hover {
+      color: #4a9eff !important;
+    }
+  }
+  
+  // Night mode button in dark mode
+  .night-mode-btn {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+}
+
+// =============================================================================
 // Professional Header
 // =============================================================================
 
