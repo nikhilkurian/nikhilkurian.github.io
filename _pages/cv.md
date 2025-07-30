@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: 
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,23 +9,25 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+## 📄 Download Full CV
+
+**For a complete, detailed version of my CV, please visit:**
+**[📋 View Full CV (Google Drive)](https://drive.google.com/file/d/1Kqrl4a0CmgpOV0vBZMup8Os5gldjkFM6/view?usp=sharing)**
+
+---
+
+## Quick Overview
+
+### Education
 * <b>Ph.D</b> in Electrical Engineering, Indian Institute of Technology Bombay, 2023
 * <b>B.Tech.</b> in Electronics and Communication Engineering, Dr. M.G.R. Educational and Research Institute Chennai, 2012
 
-Publications
-======
-  <ul>{% for post in site.publications reversed%}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Work experience
-======
+### Current Position
 * <b>Post-doctoral Research Staff (2023-Present)</b>
   * Australian Institute of Machine Learning (AIML), University of Adelaide
   * Research focus: Machine learning and artificial intelligence applications
 
+### Recent Experience
 * <b>Senior AI Researcher (2023)</b>
   * Fujitsu Research of India Pvt Ltd (FRIPL)
   * Research and development in artificial intelligence
@@ -43,32 +45,35 @@ Work experience
   * Duties included:
     * Development of Piezo-electric sensor
     * Interfacing of the sensor with driver electronics
-  * Supervisor: Professor Ranjith Ramadurai 
+  * Supervisor: Professor Ranjith Ramadurai
 
-Scholastic Achievements
-======
+### Selected Publications
+  <ul>{% for post in site.publications reversed limit:5 %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul> 
+
+### Key Achievements
 * Recipient PG Passing-out Color (Sports), Gymkhana Awards 2018-2019, IIT Bombay
-* Reviewer for CDC 2019
-* Reviewer for MICCAI 2018
-* Judge for e-Yantra Symposium(eYS) 2018
-* Judge for  Avriti 2018, Avriti 2017
-   
-Projects & Talks
-======
-  <ul>{% for post in site.talks reversed%}
+* Reviewer for CDC 2019, MICCAI 2018
+* Judge for e-Yantra Symposium(eYS) 2018, Avriti 2018, Avriti 2017
+
+### Selected Talks & Presentations
+  <ul>{% for post in site.talks reversed limit:3 %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
 
-Service and leadership
-======
+### Leadership & Service
 * Mentored and collaborated in 10 master thesis at Electrical Engineering, IIT Bombay
 * Coach and Manager for National Ultimate Frisbee Team, IIT Bombay (2017-2019)
 * Sports Councilor, Hostel 1, IIT Bombay (2016-2017)
-* Teaching Assitant for Introduction to Machine Learning, Digital Image Processing, Applied Linear Algebra, Matrix Computations.
+* Teaching Assistant for Introduction to Machine Learning, Digital Image Processing, Applied Linear Algebra, Matrix Computations
 
-Technical Skills
-======
+### Technical Skills
 
 | <b>Programming languages</b> |                <b>Python, C/C++, R</b>               |
 |   <b>Software Libraries</b>  |       <b>TensorFlow, PyTorch, Keras, Torch</b>       |
 |         <b>Tools</b>         | <b>MATLAB, NI Labview, Scilab, Sage, Mathematica</b> |
+
+---
+
+**For complete details, awards, and full publication list, please visit the Google Docs CV link above.**
