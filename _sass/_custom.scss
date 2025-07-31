@@ -2294,19 +2294,124 @@ body.night-mode .skills-section {
   }
   
   .sidebar {
-    padding: 1em !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 1em 0.5em !important;
+    text-align: center !important;
+    
+    .author__avatar {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin: 0 auto 0.5em auto !important;
+      text-align: center !important;
+      width: 100% !important;
+      
+      img {
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+        max-width: 120px !important;
+        width: 100% !important;
+        height: auto !important;
+        box-shadow: 0 2px 8px rgba(44, 82, 130, 0.08);
+      }
+    }
+    
+    .author__content {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
     
     .author__name {
-      font-size: 1.1em;
+      display: block !important;
+      text-align: center !important;
+      margin: 0.5em 0 0.2em 0 !important;
+      font-size: 1.1em !important;
+      font-weight: 700 !important;
+      width: 100% !important;
+      color: #222 !important;
+      background: none !important;
+      -webkit-text-fill-color: #222 !important;
+      -webkit-background-clip: initial !important;
+      background-clip: initial !important;
     }
     
     .author__bio {
-      font-size: 0.85em;
+      text-align: center !important;
+      margin: 0.5em 0 !important;
+      font-size: 0.85em !important;
     }
     
-    .author__urls li a {
-      padding: 0.5em 0.8em;
-      font-size: 0.8em;
+    // Hide the sidebar night mode toggle on mobile
+    .night-mode-section {
+      display: none !important;
+    }
+    
+    // Hide the Follow button on mobile
+    .btn--inverse {
+      display: none !important;
+    }
+  }
+  
+  // Move night mode toggle to masthead on mobile
+  .masthead {
+    position: relative !important;
+    
+    .header-dark-mode-toggle {
+      position: absolute !important;
+      top: 50% !important;
+      right: 1em !important;
+      transform: translateY(-50%) !important;
+      z-index: 1001 !important;
+      display: flex !important;
+      align-items: center !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 50px !important;
+      height: 30px !important;
+    }
+    
+    .toggle-switch-label-header {
+      padding: 3px !important;
+      width: 44px !important;
+      height: 24px !important;
+    }
+    
+    .toggle-switch-track-header {
+      width: 38px !important;
+      height: 18px !important;
+      
+      &::before {
+        width: 10px !important;
+        height: 10px !important;
+      }
+    }
+    
+    .toggle-switch-thumb-header {
+      width: 10px !important;
+      height: 10px !important;
+      
+      .toggle-icon-moon-header,
+      .toggle-icon-sun-header {
+        font-size: 6px !important;
+      }
+    }
+    
+    .toggle-switch-input-header:checked + .toggle-switch-label-header {
+      .toggle-switch-track-header::before {
+        transform: translateX(20px) !important;
+      }
+      
+      .toggle-switch-thumb-header {
+        transform: translateX(20px) !important;
+      }
     }
   }
   
