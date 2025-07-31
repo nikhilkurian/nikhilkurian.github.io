@@ -1958,6 +1958,60 @@ body.night-mode .skills-section {
 @media (max-width: 768px) {
   
   // =============================================================================
+  // Force Immediate Mobile Layout Application
+  // =============================================================================
+  
+  // Ensure mobile layout is applied immediately on page load
+  * {
+    box-sizing: border-box;
+  }
+  
+  // Force mobile layout for main content
+  #main {
+    display: block !important;
+    flex-direction: column !important;
+    gap: 1em !important;
+    width: 100% !important;
+  }
+  
+  // Force sidebar to be full width and properly positioned
+  .sidebar,
+  #main .sidebar,
+  div.sidebar,
+  .sidebar__right,
+  #main .sidebar__right {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 0 1.5em 0 !important;
+    padding: 1.5em !important;
+    order: 1 !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    display: block !important;
+  }
+  
+  // Force author content to be centered
+  .author__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  // Force follow button to be centered
+  .follow-btn {
+    display: block !important;
+    margin: 1em auto 0.5em auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: fit-content !important;
+    max-width: 200px !important;
+  }
+  
+  // =============================================================================
   // General Mobile Layout
   // =============================================================================
   
@@ -2358,7 +2412,8 @@ body.night-mode .skills-section {
     .follow-btn {
       display: block !important;
       margin: 1em auto 0.5em auto !important;
-      margin-left: 6.5em !important; // Move 6.5em to the right
+      margin-left: auto !important; // Center the button
+      margin-right: auto !important; // Center the button
       padding: 0.5em 1.5em !important;
       font-size: 0.9em !important;
       font-weight: 600 !important;
@@ -3135,9 +3190,9 @@ body.night-mode {
 
 // Mobile follow button styling
 .follow-btn-mobile {
-  display: none; // Hidden by default on desktop
-  visibility: hidden; // Ensure it's hidden on desktop
-  opacity: 0; // Ensure it's hidden on desktop
+  display: none !important; // Hidden by default on desktop
+  visibility: hidden !important; // Ensure it's hidden on desktop
+  opacity: 0 !important; // Ensure it's hidden on desktop
 }
 
 // Desktop follow button styling

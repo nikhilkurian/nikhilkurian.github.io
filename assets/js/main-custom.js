@@ -23,6 +23,70 @@
 
 $(document).ready(function(){
   // ===========================================================================
+  // FORCE MOBILE LAYOUT IMMEDIATELY
+  // ===========================================================================
+  
+  // Force mobile layout to be applied immediately
+  function forceMobileLayout() {
+    if (window.innerWidth <= 768) {
+      // Force sidebar to be full width
+      const sidebar = document.querySelector('.sidebar, .sidebar__right');
+      if (sidebar) {
+        sidebar.style.width = '100%';
+        sidebar.style.maxWidth = '100%';
+        sidebar.style.float = 'none';
+        sidebar.style.margin = '0 0 1.5em 0';
+        sidebar.style.padding = '1.5em';
+        sidebar.style.order = '1';
+        sidebar.style.position = 'relative';
+        sidebar.style.left = 'auto';
+        sidebar.style.right = 'auto';
+        sidebar.style.display = 'block';
+      }
+      
+      // Force main content to be block
+      const main = document.getElementById('main');
+      if (main) {
+        main.style.display = 'block';
+        main.style.flexDirection = 'column';
+        main.style.gap = '1em';
+        main.style.width = '100%';
+      }
+      
+      // Force author content to be centered
+      const authorContent = document.querySelector('.author__content');
+      if (authorContent) {
+        authorContent.style.display = 'flex';
+        authorContent.style.flexDirection = 'column';
+        authorContent.style.alignItems = 'center';
+        authorContent.style.textAlign = 'center';
+        authorContent.style.width = '100%';
+      }
+      
+      // Force follow button to be centered
+      const followBtn = document.querySelector('.follow-btn');
+      if (followBtn) {
+        followBtn.style.display = 'block';
+        followBtn.style.margin = '1em auto 0.5em auto';
+        followBtn.style.marginLeft = 'auto';
+        followBtn.style.marginRight = 'auto';
+        followBtn.style.width = 'fit-content';
+        followBtn.style.maxWidth = '200px';
+      }
+    }
+  }
+  
+  // Apply mobile layout immediately
+  forceMobileLayout();
+  
+  // Apply mobile layout on window resize
+  window.addEventListener('resize', forceMobileLayout);
+  
+  // Apply mobile layout after a short delay to ensure all elements are loaded
+  setTimeout(forceMobileLayout, 100);
+  setTimeout(forceMobileLayout, 500);
+  
+  // ===========================================================================
   // FORCE DARK MODE AS DEFAULT - IMMEDIATE EXECUTION
   // ===========================================================================
   // Add night-mode class by default
@@ -334,7 +398,7 @@ $(document).ready(function(){
               <button class="follow-popup-close" onclick="closeFollowPopup()">&times;</button>
             </div>
                              <div class="follow-popup-body">
-                   <p>Stay updated with my latest research and publications!</p>
+                   <p>Follow me to know more about my activities</p>
                    <div class="follow-popup-links">
                      <a href="https://linkedin.com/in/nikhilkurian" target="_blank" class="follow-link">
                        <i class="fab fa-linkedin"></i> LinkedIn
