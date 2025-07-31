@@ -2010,9 +2010,22 @@ body.night-mode .skills-section {
     left: auto !important;
     right: auto !important;
     
+    .author__avatar {
+      display: block !important;
+      margin: 0 auto 1em auto !important;
+      text-align: center !important;
+      
+      img {
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+      }
+    }
+    
     .author__name {
       font-size: 1.2em;
       text-align: center;
+      margin-top: 0.5em !important;
     }
     
     .author__bio {
@@ -2125,26 +2138,39 @@ body.night-mode .skills-section {
     line-height: 1.4;
   }
   
-  // Mobile Header Toggle
+  // Mobile Header Toggle - Fix overlap issues
   // =============================================================================
   
+  .masthead {
+    .greedy-nav {
+      .greedy-nav__toggle {
+        margin-right: 80px !important; /* Give space for dark mode toggle */
+      }
+    }
+  }
+  
   .header-dark-mode-toggle {
-    margin-left: 0.5em;
-    padding-left: 0.5em;
-    width: 60px; /* Smaller fixed width for mobile */
+    position: absolute !important;
+    right: 1em !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 60px !important;
+    z-index: 1001 !important; /* Ensure it's above other elements */
   }
   
   .toggle-switch-label-header {
-    padding: 4px;
-    width: 52px; /* Fixed width for mobile */
+    padding: 4px !important;
+    width: 52px !important;
   }
   
   .toggle-switch-track-header {
-    width: 44px;
-    height: 20px;
+    width: 44px !important;
+    height: 20px !important;
     
     &::before {
-      width: 12px;
+      width: 12px !important;
       height: 12px;
     }
   }
