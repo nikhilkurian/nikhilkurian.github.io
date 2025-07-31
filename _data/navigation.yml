@@ -10,5 +10,8 @@ main:
   - title: "Talks & Presentations"
     url: /talks/    
        
+  - title: "AI Notes"
+    url: /ai-notes/
+    
   - title: "Resources"
     url: /resources/

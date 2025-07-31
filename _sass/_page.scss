@@ -382,10 +382,11 @@
   padding-top: 1em;
   border-top: 1px solid $border-color;
   @include clearfix();
-  float: left;
+  clear: both;
+  width: 100%;
 
   @include breakpoint($large) {
-    @include pre(2.5 of 12);
+    width: 100%;
   }
 
   a {

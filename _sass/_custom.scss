@@ -3,6 +3,70 @@
 // =============================================================================
 
 // =============================================================================
+// Override Blue Theme Variables - FIX BLUE BORDERS
+// =============================================================================
+
+// Override the blue theme variables that are causing blue borders
+$gray: #666666 !default;  // Change from blue (#1976d2) to gray
+$lighter-gray: #e9ecef !default;  // Change from light blue to light gray
+$border-color: #e9ecef !default;  // Override border color
+$code-background-color: #f8f9fa !default;  // Override code background
+
+// Target the specific blue color #e8f1fb that's causing the border
+* {
+  &[style*="border-color: #e8f1fb"],
+  &[style*="border: 1px solid #e8f1fb"],
+  &[style*="background-color: #e8f1fb"] {
+    border-color: #e9ecef !important;
+    background-color: #f8f9fa !important;
+  }
+}
+
+// NUCLEAR OPTION: Force override any blue borders with maximum specificity
+html body div.highlighter-rouge,
+html body figure.highlight,
+html body .language-python.highlighter-rouge,
+html body .language-bash.highlighter-rouge,
+html body .language-Dockerfile.highlighter-rouge,
+html body .language-plaintext.highlighter-rouge {
+  border: 1px solid #e9ecef !important;
+  border-color: #e9ecef !important;
+  border-top-color: #e9ecef !important;
+  border-right-color: #e9ecef !important;
+  border-bottom-color: #e9ecef !important;
+  border-left-color: #e9ecef !important;
+}
+
+// Also target any element with the specific blue color
+html body *[style*="#e8f1fb"] {
+  border-color: #e9ecef !important;
+  background-color: #f8f9fa !important;
+}
+
+// Dark mode code block overrides - ensure they work
+html body.night-mode div.highlighter-rouge,
+html body.night-mode figure.highlight,
+html body.night-mode .language-python.highlighter-rouge,
+html body.night-mode .language-bash.highlighter-rouge,
+html body.night-mode .language-Dockerfile.highlighter-rouge,
+html body.night-mode .language-plaintext.highlighter-rouge {
+  border: 1px solid #3c3c3c !important;
+  border-color: #3c3c3c !important;
+  border-top-color: #3c3c3c !important;
+  border-right-color: #3c3c3c !important;
+  border-bottom-color: #3c3c3c !important;
+  border-left-color: #3c3c3c !important;
+  background-color: #1e1e1e !important;
+}
+
+// Dark mode icon overrides
+html body.night-mode div.highlighter-rouge::before,
+html body.night-mode figure.highlight::before {
+  background-color: #3c3c3c !important;
+  color: #d4d4d4 !important;
+}
+
+// =============================================================================
 // Remove Green Background Completely
 // =============================================================================
 
@@ -988,6 +1052,229 @@ body.night-mode .email-scrambled .reveal-link {
   
   &:hover {
     color: #cbd5e0 !important;
+  }
+}
+
+// Dark mode code block styling (VS Code-like theme)
+body.night-mode {
+  // Override theme variables that cause blue backgrounds
+  --code-background-color: #1e1e1e !important;
+  --code-background-color-dark: #1e1e1e !important;
+  
+  // Force override any theme variables
+  code, pre, .highlight {
+    --code-background-color: #1e1e1e !important;
+    --code-background-color-dark: #1e1e !important;
+  }
+  code {
+    background-color: #1e1e1e !important; // VS Code dark background
+    color: #d4d4d4 !important; // VS Code light gray text
+    border: 1px solid #3c3c3c !important; // VS Code border
+    font-size: 0.95em !important; // Slightly smaller font size for inline code
+  }
+  
+  pre {
+    background-color: #1e1e1e !important; // VS Code dark background
+    border: 1px solid #3c3c3c !important;
+    font-size: 1.05em !important; // Smaller font size for code blocks
+    line-height: 1.5 !important; // Better line spacing
+    
+    code {
+      background-color: transparent !important; // Remove background from inline code in blocks
+      border: none !important;
+      font-size: inherit !important; // Inherit font size from parent
+      color: #d4d4d4 !important; // VS Code light gray text
+    }
+  }
+  
+  .highlight {
+    background-color: #1e1e1e !important; // VS Code dark background
+    border: 1px solid #3c3c3c !important;
+    font-size: 1.05em !important; // Smaller font size for highlighted code
+    
+    pre {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: inherit !important; // Inherit font size from parent
+    }
+  }
+  
+  // Remove any blue borders from code elements
+  code, pre, .highlight {
+    border-color: #3c3c3c !important;
+    
+    &[style*="border"] {
+      border-color: #3c3c3c !important;
+    }
+  }
+  
+  // Override any blue border colors
+  * {
+    &[style*="border-color: blue"],
+    &[style*="border-color: #0000ff"],
+    &[style*="border-color: rgb(0, 0, 255)"],
+    &[style*="border: blue"],
+    &[style*="border: #0000ff"],
+    &[style*="border: rgb(0, 0, 255)"] {
+      border-color: #3c3c3c !important;
+    }
+  }
+}
+
+// Dark mode sidebar and email color adjustments
+body.night-mode {
+  // Remove all blue backgrounds from code elements
+  .archive__item-excerpt code,
+  .page__content code,
+  .post__content code,
+  .notice code,
+  .notice--primary code,
+  .notice--info code,
+  .notice--warning code,
+  .notice--success code,
+  .notice--danger code {
+    background-color: #1e1e1e !important; // VS Code dark background
+    color: #d4d4d4 !important; // VS Code light gray text
+    border: 1px solid #3c3c3c !important; // VS Code border
+    font-size: 0.95em !important; // Smaller font size
+  }
+  
+  // Remove blue backgrounds from all code blocks
+  .archive__item-excerpt pre,
+  .page__content pre,
+  .post__content pre,
+  .notice pre,
+  .notice--primary pre,
+  .notice--info pre,
+  .notice--warning pre,
+  .notice--success pre,
+  .notice--danger pre {
+    background-color: #1e1e1e !important; // VS Code dark background
+    border: 1px solid #3c3c3c !important; // VS Code border
+    font-size: 1.05em !important; // Smaller font size
+    line-height: 1.5 !important; // Better line spacing
+    
+    code {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: inherit !important; // Inherit font size from parent
+      color: #d4d4d4 !important; // VS Code light gray text
+    }
+  }
+  
+  // Override any remaining blue backgrounds
+  * {
+    &[style*="background-color: rgb(240, 248, 255)"],
+    &[style*="background-color: #f0f8ff"],
+    &[style*="background-color: lightblue"],
+    &[style*="background-color: aliceblue"] {
+      background-color: #1e1e1e !important; // VS Code dark background
+    }
+  }
+  
+  // Additional blue background overrides for code elements
+  code, pre, .highlight, .archive__item-excerpt code, .page__content code, .post__content code {
+    &[style*="background"] {
+      background-color: #1e1e1e !important; // VS Code dark background
+    }
+  }
+  
+  pre, .highlight {
+    &[style*="background"] {
+      background-color: #1e1e1e !important; // VS Code dark background
+    }
+  }
+  
+  // Force override any CSS that might be adding blue backgrounds
+  .archive__item-excerpt,
+  .page__content,
+  .post__content {
+    code, pre {
+      background-color: #1e1e1e !important; // VS Code dark background
+      
+      &[style*="background"] {
+        background-color: #1e1e1e !important; // VS Code dark background
+      }
+    }
+    
+    pre {
+      background-color: #1e1e1e !important; // VS Code dark background
+      
+      &[style*="background"] {
+        background-color: #1e1e1e !important; // VS Code dark background
+      }
+    }
+  }
+  
+  // Strongest possible overrides for VS Code theme
+  code, pre, .highlight {
+    background-color: #1e1e1e !important; // VS Code dark background
+    color: #d4d4d4 !important; // VS Code light gray text
+    border-color: #3c3c3c !important; // VS Code border
+    
+    &[style*="background"] {
+      background-color: #1e1e1e !important; // VS Code dark background
+    }
+    
+    &[style*="color"] {
+      color: #d4d4d4 !important; // VS Code light gray text
+    }
+    
+    &[style*="border"] {
+      border-color: #3c3c3c !important; // VS Code border
+    }
+  }
+  
+  // Nuclear option: Override ALL possible blue backgrounds and borders
+  * {
+    &[style*="background-color: rgb(240, 248, 255)"],
+    &[style*="background-color: #f0f8ff"],
+    &[style*="background-color: lightblue"],
+    &[style*="background-color: aliceblue"],
+    &[style*="background-color: #1976d2"],
+    &[style*="background-color: rgb(25, 118, 210)"],
+    &[style*="background-color: #e3f2fd"],
+    &[style*="background-color: #bbdefb"],
+    &[style*="background-color: #90caf9"],
+    &[style*="background-color: #64b5f6"],
+    &[style*="background-color: #42a5f5"],
+    &[style*="background-color: #2196f3"],
+    &[style*="background-color: #1e88e5"],
+    &[style*="background-color: #1976d2"],
+    &[style*="background-color: #1565c0"],
+    &[style*="background-color: #0d47a1"] {
+      background-color: #1e1e1e !important; // VS Code dark background
+    }
+    
+    &[style*="border-color: blue"],
+    &[style*="border-color: #0000ff"],
+    &[style*="border-color: rgb(0, 0, 255)"],
+    &[style*="border-color: #1976d2"],
+    &[style*="border-color: rgb(25, 118, 210)"],
+    &[style*="border: blue"],
+    &[style*="border: #0000ff"],
+    &[style*="border: rgb(0, 0, 255)"],
+    &[style*="border: #1976d2"],
+    &[style*="border: rgb(25, 118, 210)"] {
+      border-color: #3c3c3c !important; // VS Code border
+    }
+  }
+  
+  // Override any theme defaults that might be blue
+  .archive__item-excerpt,
+  .page__content,
+  .post__content,
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    code, pre, .highlight {
+      background-color: #1e1e1e !important; // VS Code dark background
+      color: #d4d4d4 !important; // VS Code light gray text
+      border-color: #3c3c3c !important; // VS Code border
+    }
   }
 }
 
@@ -2025,4 +2312,224 @@ body.night-mode .page__title {
 
 body.night-mode .updates-list .update-item::before {
   background: linear-gradient(180deg, #66d9ff 0%, rgba(102,217,255,0.3) 100%) !important;
+} 
+
+// =============================================================================
+// Light Mode Code Block Styling (Clean White Background)
+// =============================================================================
+
+body:not(.night-mode) {
+  code {
+    background-color: #f8f9fa !important; // Light gray background
+    color: #333 !important; // Dark text
+    border: 1px solid #e9ecef !important; // Light border
+    font-size: 0.95em !important;
+  }
+  
+  pre {
+    background-color: #ffffff !important; // Clean white background
+    border: 1px solid #e9ecef !important;
+    font-size: 1.05em !important;
+    line-height: 1.5 !important;
+    
+    code {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: inherit !important;
+      color: #333 !important; // Dark text
+    }
+  }
+  
+  .highlight {
+    background-color: #ffffff !important; // Clean white background
+    border: 1px solid #e9ecef !important;
+    font-size: 1.05em !important;
+    
+    pre {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: inherit !important;
+    }
+  }
+  
+  // Light mode specific code elements
+  .archive__item-excerpt code,
+  .page__content code,
+  .post__content code,
+  .notice code,
+  .notice--primary code,
+  .notice--info code,
+  .notice--warning code,
+  .notice--success code,
+  .notice--danger code {
+    background-color: #f8f9fa !important; // Light gray background
+    color: #333 !important; // Dark text
+    border: 1px solid #e9ecef !important; // Light border
+    font-size: 0.95em !important;
+  }
+  
+  .archive__item-excerpt pre,
+  .page__content pre,
+  .post__content pre,
+  .notice pre,
+  .notice--primary pre,
+  .notice--info pre,
+  .notice--warning pre,
+  .notice--success pre,
+  .notice--danger pre {
+    background-color: #ffffff !important; // Clean white background
+    border: 1px solid #e9ecef !important;
+    font-size: 1.05em !important;
+    line-height: 1.5 !important;
+    
+    code {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: inherit !important;
+      color: #333 !important; // Dark text
+    }
+  }
+} 
+
+// =============================================================================
+// Remove Blue Borders and Icons from Code Blocks - ULTIMATE FIX
+// =============================================================================
+
+// Override CSS variables at root level to prevent blue borders
+:root {
+  --border-color: #e9ecef !important;
+  --code-background-color: #f8f9fa !important;
+}
+
+// NUCLEAR OPTION: Override ALL possible code block borders with maximum specificity
+body.night-mode {
+  // Override CSS variables for dark mode
+  --border-color: #3c3c3c !important;
+  --code-background-color: #1e1e1e !important;
+  
+  // Remove the blue code icon from code blocks
+  div.highlighter-rouge::before,
+  figure.highlight::before {
+    background-color: #3c3c3c !important;
+    color: #d4d4d4 !important;
+  }
+  
+  // Also target any other code block containers
+  .highlight::before,
+  pre::before {
+    background-color: #3c3c3c !important;
+    color: #d4d4d4 !important;
+  }
+  
+  // NUCLEAR BORDER REMOVAL - Target with maximum specificity
+  div.highlighter-rouge,
+  figure.highlight,
+  .language-python.highlighter-rouge,
+  .language-bash.highlighter-rouge,
+  .language-Dockerfile.highlighter-rouge,
+  .language-plaintext.highlighter-rouge,
+  div[class*="highlighter-rouge"],
+  div[class*="language-"].highlighter-rouge {
+    border: 1px solid #3c3c3c !important;
+    border-color: #3c3c3c !important;
+    border-top-color: #3c3c3c !important;
+    border-right-color: #3c3c3c !important;
+    border-bottom-color: #3c3c3c !important;
+    border-left-color: #3c3c3c !important;
+  }
+  
+  // Remove blue borders from inline code
+  p > code,
+  a > code,
+  li > code,
+  figcaption > code,
+  td > code,
+  code.language-plaintext.highlighter-rouge,
+  code[class*="highlighter-rouge"] {
+    border: 1px solid #3c3c3c !important;
+    border-color: #3c3c3c !important;
+    border-top-color: #3c3c3c !important;
+    border-right-color: #3c3c3c !important;
+    border-bottom-color: #3c3c3c !important;
+    border-left-color: #3c3c3c !important;
+  }
+}
+
+body:not(.night-mode) {
+  // Override CSS variables for light mode
+  --border-color: #e9ecef !important;
+  --code-background-color: #f8f9fa !important;
+  
+  // Remove the blue code icon from code blocks in light mode
+  div.highlighter-rouge::before,
+  figure.highlight::before {
+    background-color: #e9ecef !important;
+    color: #333 !important;
+  }
+  
+  // Also target any other code block containers
+  .highlight::before,
+  pre::before {
+    background-color: #e9ecef !important;
+    color: #333 !important;
+  }
+  
+  // NUCLEAR BORDER REMOVAL - Target with maximum specificity
+  div.highlighter-rouge,
+  figure.highlight,
+  .language-python.highlighter-rouge,
+  .language-bash.highlighter-rouge,
+  .language-Dockerfile.highlighter-rouge,
+  .language-plaintext.highlighter-rouge,
+  div[class*="highlighter-rouge"],
+  div[class*="language-"].highlighter-rouge {
+    border: 1px solid #e9ecef !important;
+    border-color: #e9ecef !important;
+    border-top-color: #e9ecef !important;
+    border-right-color: #e9ecef !important;
+    border-bottom-color: #e9ecef !important;
+    border-left-color: #e9ecef !important;
+  }
+  
+  // Remove blue borders from inline code
+  p > code,
+  a > code,
+  li > code,
+  figcaption > code,
+  td > code,
+  code.language-plaintext.highlighter-rouge,
+  code[class*="highlighter-rouge"] {
+    border: 1px solid #e9ecef !important;
+    border-color: #e9ecef !important;
+    border-top-color: #e9ecef !important;
+    border-right-color: #e9ecef !important;
+    border-bottom-color: #e9ecef !important;
+    border-left-color: #e9ecef !important;
+  }
+}
+
+// =============================================================================
+// Dark Mode Table Styling - FIX BRIGHT BLUE HEADERS
+// =============================================================================
+
+body.night-mode {
+  table {
+    border: 1px solid #3c3c3c !important;
+    
+    thead {
+      background-color: #2d2d2d !important;
+      border-bottom: 1px solid #3c3c3c !important;
+    }
+    
+    th {
+      color: #d4d4d4 !important;
+      border-right: 1px solid #3c3c3c !important;
+    }
+    
+    td {
+      color: #d4d4d4 !important;
+      border-bottom: 1px solid #3c3c3c !important;
+      border-right: 1px solid #3c3c3c !important;
+    }
+  }
 } 
