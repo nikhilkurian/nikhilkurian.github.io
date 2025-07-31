@@ -31,14 +31,18 @@
       {% if author.email %}
         <li>
           <div class="email-reveal-container">
-            <button class="email-reveal-btn" onclick="revealEmail()">
+            <div class="email-scrambled" id="emailScrambled">
               <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 
-              <span class="email-text">Click to reveal email</span>
-            </button>
-            <span class="email-revealed" id="emailRevealed" style="display: none;">
+              <span class="scrambled-text">n***h***@g***.c***</span>
+              <button class="unscramble-btn" onclick="unscrambleEmail()">
+                <i class="fas fa-fw fa-eye" aria-hidden="true"></i> 
+                <span>Unscramble</span>
+              </button>
+            </div>
+            <div class="email-revealed" id="emailRevealed" style="display: none;">
               <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 
               <a href="mailto:{{ author.email }}">{{ author.email }}</a>
-            </span>
+            </div>
           </div>
         </li>
       {% endif %}

@@ -240,14 +240,14 @@ $(document).ready(function(){
   // Email Reveal Functionality
   // =============================================================================
   
-  // Global function to reveal email
-  window.revealEmail = function() {
-    const emailBtn = document.querySelector('.email-reveal-btn');
+  // Global function to unscramble email
+  window.unscrambleEmail = function() {
+    const emailScrambled = document.getElementById('emailScrambled');
     const emailRevealed = document.getElementById('emailRevealed');
     
-    if (emailBtn && emailRevealed) {
-      // Hide the button
-      emailBtn.style.display = 'none';
+    if (emailScrambled && emailRevealed) {
+      // Hide the scrambled email
+      emailScrambled.style.display = 'none';
       
       // Show the revealed email with animation
       emailRevealed.style.display = 'inline-flex';

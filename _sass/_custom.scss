@@ -420,7 +420,7 @@ body.night-mode {
 }
 
 // =============================================================================
-// Email Reveal Styling
+// Email Scramble/Unscramble Styling
 // =============================================================================
 
 .email-reveal-container {
@@ -428,44 +428,71 @@ body.night-mode {
   width: 100%;
 }
 
-.email-reveal-btn {
+.email-scrambled {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0.8em 1.2em;
+  background: rgba(44, 82, 130, 0.1);
+  border: 2px solid rgba(44, 82, 130, 0.2);
+  border-radius: 8px;
+  color: #2c5282;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  margin: 0.5em 0;
+  
+  i {
+    color: #2c5282;
+    font-size: 1em;
+  }
+  
+  .scrambled-text {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+    color: #4a5568;
+  }
+}
+
+.unscramble-btn {
   background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%) !important;
   border: 2px solid #2c5282 !important;
-  border-radius: 8px !important;
-  padding: 0.8em 1.2em !important;
+  border-radius: 6px !important;
+  padding: 0.4em 0.8em !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
+  gap: 6px !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   color: white !important;
-  font-size: 0.9em !important;
+  font-size: 0.8em !important;
   font-weight: 600 !important;
-  width: 100% !important;
   font-family: inherit !important;
-  margin: 0.5em 0 !important;
-  min-height: 44px !important;
+  min-height: 32px !important;
+  flex-shrink: 0 !important;
   
   &:hover {
-    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 3px 8px rgba(44, 82, 130, 0.3) !important;
   }
   
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.3);
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(44, 82, 130, 0.3) !important;
   }
   
   i {
-    font-size: 1em;
-    transition: transform 0.3s ease;
+    font-size: 0.9em !important;
+    transition: transform 0.3s ease !important;
   }
   
-  .email-text {
-    font-weight: 600;
-    letter-spacing: 0.5px;
+  span {
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
   }
 }
 
@@ -498,14 +525,28 @@ body.night-mode {
   }
 }
 
-// Dark mode styles for email reveal
+// Dark mode styles for email scramble/unscramble
 body.night-mode {
-  .email-reveal-btn {
-    background: linear-gradient(135deg, #4a9eff 0%, #3a7bd5 100%);
-    border-color: #4a9eff;
+  .email-scrambled {
+    background: rgba(74, 158, 255, 0.1);
+    border-color: rgba(74, 158, 255, 0.3);
+    color: #4a9eff;
+    
+    i {
+      color: #4a9eff;
+    }
+    
+    .scrambled-text {
+      color: #e0e0e0;
+    }
+  }
+  
+  .unscramble-btn {
+    background: linear-gradient(135deg, #4a9eff 0%, #3a7bd5 100%) !important;
+    border-color: #4a9eff !important;
     
     &:hover {
-      background: linear-gradient(135deg, #3a7bd5 0%, #4a9eff 100%);
+      background: linear-gradient(135deg, #3a7bd5 0%, #4a9eff 100%) !important;
     }
   }
   
@@ -1720,13 +1761,24 @@ body.night-mode .updates-list .update-item::before {
     }
   }
   
-  // Mobile Email Reveal
-  .email-reveal-btn {
+  // Mobile Email Scramble/Unscramble
+  .email-scrambled {
     padding: 0.6em 1em;
     font-size: 0.85em;
+    gap: 8px;
     
-    .email-text {
-      font-size: 0.85em;
+    .scrambled-text {
+      font-size: 0.8em;
+    }
+  }
+  
+  .unscramble-btn {
+    padding: 0.3em 0.6em;
+    font-size: 0.75em;
+    min-height: 28px;
+    
+    span {
+      font-size: 0.75em;
     }
   }
   
