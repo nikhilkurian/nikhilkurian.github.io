@@ -2358,6 +2358,7 @@ body.night-mode .skills-section {
     .follow-btn {
       display: block !important;
       margin: 1em auto 0.5em auto !important;
+      margin-left: 6.5em !important; // Move 6.5em to the right
       padding: 0.5em 1.5em !important;
       font-size: 0.9em !important;
       font-weight: 600 !important;
@@ -3132,6 +3133,35 @@ body.night-mode {
 // Follow Button Styling
 // =============================================================================
 
+// Mobile follow button styling
+.follow-btn-mobile {
+  display: none; // Hidden by default on desktop
+  visibility: hidden; // Ensure it's hidden on desktop
+  opacity: 0; // Ensure it's hidden on desktop
+}
+
+// Desktop follow button styling
+.author__urls-wrapper .follow-btn {
+  display: inline-block;
+  margin: 0.5em 0;
+  padding: 0.5em 1.5em;
+  font-size: 0.9em;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(44, 82, 130, 0.2);
+  
+  &:hover {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+  }
+}
+
 .follow-btn {
   display: block;
   margin: 1em auto 0.5em auto;
@@ -3163,4 +3193,139 @@ body.night-mode .follow-btn {
     background: linear-gradient(135deg, #2c5282 0%, #4a9eff 100%) !important;
     box-shadow: 0 4px 12px rgba(74, 158, 255, 0.4) !important;
   }
+}
+
+// =============================================================================
+// Follow Popup Styling
+// =============================================================================
+
+.follow-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.follow-popup-content {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.follow-popup.show .follow-popup-content {
+  transform: scale(1);
+}
+
+.follow-popup-header {
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  color: white !important;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.follow-popup-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white !important;
+}
+
+.follow-popup-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.follow-popup-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.follow-popup-body {
+  padding: 1.5rem;
+}
+
+.follow-popup-body p {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.follow-popup-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.follow-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.follow-link:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.follow-link i {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+// Dark mode styling for follow popup
+body.night-mode .follow-popup-content {
+  background: #2d3748;
+  color: white;
+}
+
+body.night-mode .follow-popup-body p {
+  color: #e2e8f0;
+}
+
+body.night-mode .follow-link {
+  background: #4a5568;
+  border-color: #718096;
+  color: #e2e8f0;
+}
+
+body.night-mode .follow-link:hover {
+  background: #718096;
 }

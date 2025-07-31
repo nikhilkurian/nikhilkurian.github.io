@@ -319,4 +319,83 @@ $(document).ready(function(){
     }
   };
 
+  // =============================================================================
+  // Follow Button Popup Functionality
+  // =============================================================================
+  
+  // Create follow popup HTML if it doesn't exist
+  function createFollowPopup() {
+    if (!document.getElementById('followPopup')) {
+      const popupHTML = `
+        <div id="followPopup" class="follow-popup">
+          <div class="follow-popup-content">
+            <div class="follow-popup-header">
+              <h3>Follow Me</h3>
+              <button class="follow-popup-close" onclick="closeFollowPopup()">&times;</button>
+            </div>
+                             <div class="follow-popup-body">
+                   <p>Stay updated with my latest research and publications!</p>
+                   <div class="follow-popup-links">
+                     <a href="https://linkedin.com/in/nikhilkurian" target="_blank" class="follow-link">
+                       <i class="fab fa-linkedin"></i> LinkedIn
+                     </a>
+                     <a href="https://github.com/nikhilkurian" target="_blank" class="follow-link">
+                       <i class="fab fa-github"></i> GitHub
+                     </a>
+                     <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" class="follow-link">
+                       <i class="fas fa-graduation-cap"></i> Google Scholar
+                     </a>
+                   </div>
+                 </div>
+          </div>
+        </div>
+      `;
+      document.body.insertAdjacentHTML('beforeend', popupHTML);
+    }
+  }
+
+  // Show follow popup
+  window.showFollowPopup = function() {
+    createFollowPopup();
+    const popup = document.getElementById('followPopup');
+    if (popup) {
+      popup.style.display = 'flex';
+      popup.style.opacity = '0';
+      setTimeout(() => {
+        popup.style.opacity = '1';
+      }, 10);
+    }
+  };
+
+  // Close follow popup
+  window.closeFollowPopup = function() {
+    const popup = document.getElementById('followPopup');
+    if (popup) {
+      popup.style.opacity = '0';
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 300);
+    }
+  };
+
+  // Add click event listeners to follow buttons
+  $(document).on('click', '.follow-btn, .follow-btn-mobile', function(e) {
+    e.preventDefault();
+    showFollowPopup();
+  });
+
+  // Close popup when clicking outside
+  $(document).on('click', '#followPopup', function(e) {
+    if (e.target.id === 'followPopup') {
+      closeFollowPopup();
+    }
+  });
+
+  // Close popup with Escape key
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeFollowPopup();
+    }
+  });
+
 });
