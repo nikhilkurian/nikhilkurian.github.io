@@ -8,29 +8,43 @@ classes: wide
 
 Welcome to my AI Notes section! Here I share insights, tutorials, and research notes on various aspects of artificial intelligence and machine learning. This collection is organized into four main areas:
 
-## ML Infrastructure
+## Categories
 
-Explore MLOps, deployment strategies, monitoring, and infrastructure management for production machine learning systems.
+<div class="archive__item">
+  <div class="archive__item-body">
+    <h2 class="archive__item-title">
+      <a href="/ai-notes/ml-infrastructure/">ML Infrastructure</a>
+    </h2>
+    <p class="archive__item-excerpt">Explore MLOps, deployment strategies, monitoring, and infrastructure management for production machine learning systems. Learn about Docker, Kubernetes, and other tools essential for scaling ML applications.</p>
+  </div>
+</div>
 
-**[View ML Infrastructure Notes](/ai-notes/ml-infrastructure/)**
+<div class="archive__item">
+  <div class="archive__item-body">
+    <h2 class="archive__item-title">
+      <a href="/ai-notes/dl-systems/">Scaling Performance of DL Systems</a>
+    </h2>
+    <p class="archive__item-excerpt">Explore fundamental concepts in deep learning, computational requirements, hardware considerations, and strategies for scaling deep learning models across multiple GPUs and systems.</p>
+  </div>
+</div>
 
-## Scaling Performance of DL Systems
+<div class="archive__item">
+  <div class="archive__item-body">
+    <h2 class="archive__item-title">
+      <a href="/ai-notes/llms-rags/">LLMs and RAGs</a>
+    </h2>
+    <p class="archive__item-excerpt">Dive into Large Language Models, Retrieval-Augmented Generation, and their applications in modern AI systems. Learn about hosting LLMs locally and building RAG applications.</p>
+  </div>
+</div>
 
-Explore fundamental concepts in deep learning, computational requirements, hardware considerations, and strategies for scaling deep learning models across multiple GPUs and systems.
-
-**[View DL Systems Notes](/ai-notes/dl-systems/)**
-
-## LLMs and RAGs
-
-Dive into Large Language Models, Retrieval-Augmented Generation, and their applications in modern AI systems.
-
-**[View LLMs and RAGs Notes](/ai-notes/llms-rags/)**
-
-## Agentic AI
-
-Explore autonomous AI agents, multi-agent systems, and the future of intelligent systems that can reason and act independently.
-
-**[View Agentic AI Notes](/ai-notes/agentic-ai/)**
+<div class="archive__item">
+  <div class="archive__item-body">
+    <h2 class="archive__item-title">
+      <a href="/ai-notes/agentic-ai/">Agentic AI</a>
+    </h2>
+    <p class="archive__item-excerpt">Explore autonomous AI agents, multi-agent systems, and the future of intelligent systems that can reason and act independently. Learn about frameworks like AutoGen, LangGraph, and Crew AI.</p>
+  </div>
+</div>
 
 ---
 

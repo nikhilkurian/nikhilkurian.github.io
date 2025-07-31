@@ -10,11 +10,33 @@
    - Sidebar behavior
    ============================================================================= */
 
+// RESPECT USER PREFERENCE - RUNS BEFORE DOCUMENT READY
+(function() {
+  // Only set default if no preference exists
+  if (!localStorage.getItem('nightMode')) {
+    localStorage.setItem('nightMode', 'light');
+  }
+  
+  // Don't force remove night-mode class - let the main logic handle it
+  // This allows user preferences to be respected
+})();
+
 $(document).ready(function(){
-   // ===========================================================================
-   // Sticky Footer Implementation
-   // ===========================================================================
-   // Ensures the footer stays at the bottom of the page even when content is short
+  // ===========================================================================
+  // FORCE LIGHT MODE AS DEFAULT - IMMEDIATE EXECUTION
+  // ===========================================================================
+  // Remove any existing night-mode class immediately
+  document.body.classList.remove('night-mode');
+  
+  // Force light mode in localStorage if not set
+  if (!localStorage.getItem('nightMode')) {
+    localStorage.setItem('nightMode', 'light');
+  }
+  
+  // ===========================================================================
+  // Sticky Footer Implementation
+  // ===========================================================================
+  // Ensures the footer stays at the bottom of the page even when content is short
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
     },
@@ -184,21 +206,41 @@ $(document).ready(function(){
   // Night Mode Toggle Functionality
   // ===========================================================================
   
-  // Check for saved night mode preference or default to dark mode
-  const currentTheme = localStorage.getItem('nightMode') || 'dark';
+  // Get current theme from localStorage or default to light
+  let currentTheme = localStorage.getItem('nightMode');
+  
+  // Only set default to light if no preference exists
+  if (!currentTheme) {
+    currentTheme = 'light';
+    localStorage.setItem('nightMode', 'light');
+  }
+  
   const nightModeToggleHeader = document.getElementById('nightModeToggleHeader');
   
-  // Apply saved theme on page load
+  // Ensure body starts without night-mode class
+  document.body.classList.remove('night-mode');
+  
+  // Force toggle to be unchecked by default
+  if (nightModeToggleHeader) {
+    console.log('Found toggle, setting to unchecked');
+    nightModeToggleHeader.checked = false;
+  } else {
+    console.log('Toggle not found during initialization');
+  }
+  
+  // Apply the user's saved theme preference
   if (currentTheme === 'dark') {
     document.body.classList.add('night-mode');
     if (nightModeToggleHeader) {
       nightModeToggleHeader.checked = true;
+      console.log('Applied DARK mode from user preference');
     }
   } else {
-    // Default to dark mode if no preference is saved
-    document.body.classList.add('night-mode');
+    // Default to light mode
+    document.body.classList.remove('night-mode');
     if (nightModeToggleHeader) {
-      nightModeToggleHeader.checked = true;
+      nightModeToggleHeader.checked = false;
+      console.log('Applied LIGHT mode (default or user preference)');
     }
   }
   
@@ -226,9 +268,17 @@ $(document).ready(function(){
   // Add change event listener to header toggle switch
   if (nightModeToggleHeader) {
     console.log('Header night mode toggle switch found');
+    console.log('Initial toggle state:', nightModeToggleHeader.checked);
+    
     nightModeToggleHeader.addEventListener('change', function() {
       console.log('Header night mode toggle switched');
+      console.log('New toggle state:', this.checked);
       toggleNightMode();
+    });
+    
+    // Also add click event as backup
+    nightModeToggleHeader.addEventListener('click', function() {
+      console.log('Toggle clicked');
     });
   } else {
     console.log('Header night mode toggle switch NOT found');

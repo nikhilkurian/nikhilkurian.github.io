@@ -14,6 +14,17 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+  // SET DEFAULT TO LIGHT MODE ONLY IF NO PREFERENCE EXISTS
+  (function() {
+    // Only set default if no preference exists
+    if (!localStorage.getItem('nightMode')) {
+      localStorage.setItem('nightMode', 'light');
+    }
+    
+    // Don't force remove night-mode class - let the main logic handle it
+    // This allows user preferences to be respected across page navigation
+  })();
 </script>
 
 <!-- Google Fonts -->
