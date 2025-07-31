@@ -14,7 +14,7 @@
 (function() {
   // Only set default if no preference exists
   if (!localStorage.getItem('nightMode')) {
-    localStorage.setItem('nightMode', 'light');
+    localStorage.setItem('nightMode', 'dark');
   }
   
   // Don't force remove night-mode class - let the main logic handle it
@@ -23,14 +23,14 @@
 
 $(document).ready(function(){
   // ===========================================================================
-  // FORCE LIGHT MODE AS DEFAULT - IMMEDIATE EXECUTION
+  // FORCE DARK MODE AS DEFAULT - IMMEDIATE EXECUTION
   // ===========================================================================
-  // Remove any existing night-mode class immediately
-  document.body.classList.remove('night-mode');
+  // Add night-mode class by default
+  document.body.classList.add('night-mode');
   
-  // Force light mode in localStorage if not set
+  // Force dark mode in localStorage if not set
   if (!localStorage.getItem('nightMode')) {
-    localStorage.setItem('nightMode', 'light');
+    localStorage.setItem('nightMode', 'dark');
   }
   
   // ===========================================================================
@@ -206,41 +206,41 @@ $(document).ready(function(){
   // Night Mode Toggle Functionality
   // ===========================================================================
   
-  // Get current theme from localStorage or default to light
+  // Get current theme from localStorage or default to dark
   let currentTheme = localStorage.getItem('nightMode');
   
-  // Only set default to light if no preference exists
+  // Only set default to dark if no preference exists
   if (!currentTheme) {
-    currentTheme = 'light';
-    localStorage.setItem('nightMode', 'light');
+    currentTheme = 'dark';
+    localStorage.setItem('nightMode', 'dark');
   }
   
   const nightModeToggleHeader = document.getElementById('nightModeToggleHeader');
   
-  // Ensure body starts without night-mode class
-  document.body.classList.remove('night-mode');
+  // Ensure body starts with night-mode class by default
+  document.body.classList.add('night-mode');
   
-  // Force toggle to be unchecked by default
+  // Force toggle to be checked by default
   if (nightModeToggleHeader) {
-    console.log('Found toggle, setting to unchecked');
-    nightModeToggleHeader.checked = false;
+    console.log('Found toggle, setting to checked');
+    nightModeToggleHeader.checked = true;
   } else {
     console.log('Toggle not found during initialization');
   }
   
   // Apply the user's saved theme preference
-  if (currentTheme === 'dark') {
-    document.body.classList.add('night-mode');
-    if (nightModeToggleHeader) {
-      nightModeToggleHeader.checked = true;
-      console.log('Applied DARK mode from user preference');
-    }
-  } else {
-    // Default to light mode
+  if (currentTheme === 'light') {
     document.body.classList.remove('night-mode');
     if (nightModeToggleHeader) {
       nightModeToggleHeader.checked = false;
-      console.log('Applied LIGHT mode (default or user preference)');
+      console.log('Applied LIGHT mode from user preference');
+    }
+  } else {
+    // Default to dark mode
+    document.body.classList.add('night-mode');
+    if (nightModeToggleHeader) {
+      nightModeToggleHeader.checked = true;
+      console.log('Applied DARK mode (default or user preference)');
     }
   }
   
