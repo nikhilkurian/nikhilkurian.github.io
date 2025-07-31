@@ -2385,70 +2385,82 @@ body.night-mode .skills-section {
   // Move night mode toggle to masthead on mobile
   .masthead {
     position: relative !important;
+    padding: 0.5em 0.5em !important;
+    
+    .masthead__inner-wrap {
+      position: relative !important;
+      width: 100% !important;
+    }
     
     .greedy-nav {
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
       width: 100% !important;
+      position: relative !important;
       
       .visible-links {
         flex: 1 !important;
       }
       
       .greedy-nav__toggle {
-        margin-right: 60px !important; // Give space for night mode toggle
-        z-index: 1002 !important; // Ensure hamburger is above toggle
+        position: absolute !important;
+        right: 70px !important; // Move hamburger to the left, giving space for toggle
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 1002 !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
     }
     
     .header-dark-mode-toggle {
       position: absolute !important;
       top: 50% !important;
-      right: 0.5em !important; // Move closer to edge
+      right: 0.3em !important; // Move even closer to edge
       transform: translateY(-50%) !important;
       z-index: 1001 !important;
       display: flex !important;
       align-items: center !important;
       margin: 0 !important;
       padding: 0 !important;
-      width: 45px !important; // Make it smaller
-      height: 28px !important;
+      width: 40px !important; // Make it even smaller
+      height: 24px !important;
     }
     
     .toggle-switch-label-header {
-      padding: 2px !important;
-      width: 40px !important;
-      height: 22px !important;
+      padding: 1px !important;
+      width: 36px !important;
+      height: 20px !important;
     }
     
     .toggle-switch-track-header {
-      width: 34px !important;
-      height: 16px !important;
+      width: 30px !important;
+      height: 14px !important;
       
       &::before {
-        width: 8px !important;
-        height: 8px !important;
+        width: 6px !important;
+        height: 6px !important;
       }
     }
     
     .toggle-switch-thumb-header {
-      width: 8px !important;
-      height: 8px !important;
+      width: 6px !important;
+      height: 6px !important;
       
       .toggle-icon-moon-header,
       .toggle-icon-sun-header {
-        font-size: 5px !important;
+        font-size: 4px !important;
       }
     }
     
     .toggle-switch-input-header:checked + .toggle-switch-label-header {
       .toggle-switch-track-header::before {
-        transform: translateX(18px) !important;
+        transform: translateX(16px) !important;
       }
       
       .toggle-switch-thumb-header {
-        transform: translateX(18px) !important;
+        transform: translateX(16px) !important;
       }
     }
   }
