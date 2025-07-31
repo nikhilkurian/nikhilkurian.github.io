@@ -2386,53 +2386,69 @@ body.night-mode .skills-section {
   .masthead {
     position: relative !important;
     
+    .greedy-nav {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      
+      .visible-links {
+        flex: 1 !important;
+      }
+      
+      .greedy-nav__toggle {
+        margin-right: 60px !important; // Give space for night mode toggle
+        z-index: 1002 !important; // Ensure hamburger is above toggle
+      }
+    }
+    
     .header-dark-mode-toggle {
       position: absolute !important;
       top: 50% !important;
-      right: 1em !important;
+      right: 0.5em !important; // Move closer to edge
       transform: translateY(-50%) !important;
       z-index: 1001 !important;
       display: flex !important;
       align-items: center !important;
       margin: 0 !important;
       padding: 0 !important;
-      width: 50px !important;
-      height: 30px !important;
+      width: 45px !important; // Make it smaller
+      height: 28px !important;
     }
     
     .toggle-switch-label-header {
-      padding: 3px !important;
-      width: 44px !important;
-      height: 24px !important;
+      padding: 2px !important;
+      width: 40px !important;
+      height: 22px !important;
     }
     
     .toggle-switch-track-header {
-      width: 38px !important;
-      height: 18px !important;
+      width: 34px !important;
+      height: 16px !important;
       
       &::before {
-        width: 10px !important;
-        height: 10px !important;
+        width: 8px !important;
+        height: 8px !important;
       }
     }
     
     .toggle-switch-thumb-header {
-      width: 10px !important;
-      height: 10px !important;
+      width: 8px !important;
+      height: 8px !important;
       
       .toggle-icon-moon-header,
       .toggle-icon-sun-header {
-        font-size: 6px !important;
+        font-size: 5px !important;
       }
     }
     
     .toggle-switch-input-header:checked + .toggle-switch-label-header {
       .toggle-switch-track-header::before {
-        transform: translateX(20px) !important;
+        transform: translateX(18px) !important;
       }
       
       .toggle-switch-thumb-header {
-        transform: translateX(20px) !important;
+        transform: translateX(18px) !important;
       }
     }
   }
