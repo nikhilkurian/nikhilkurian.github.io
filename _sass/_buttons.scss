@@ -119,7 +119,7 @@
 
   $social:
   (facebook, $facebook-color),
-  (twitter, $twitter-color),
+  (x, $x-color),
   (linkedin, $linkedin-color);
 
   @each $socialnetwork, $color in $social {
