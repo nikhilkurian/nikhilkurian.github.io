@@ -32,12 +32,14 @@
         <li>
           <div class="email-reveal-container">
             <div class="email-scrambled" id="emailScrambled">
-              <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 
-              <span class="scrambled-text">n***h***@g***.c***</span>
-              <button class="unscramble-btn" onclick="unscrambleEmail()">
+              <div class="scrambled-content">
+                <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 
+                <span class="scrambled-text">n***h***@g***.c***</span>
+              </div>
+              <a href="#" class="unscramble-link" onclick="unscrambleEmail(); return false;">
                 <i class="fas fa-fw fa-eye" aria-hidden="true"></i> 
-                <span>Unscramble</span>
-              </button>
+                <span>unscramble</span>
+              </a>
             </div>
             <div class="email-revealed" id="emailRevealed" style="display: none;">
               <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 

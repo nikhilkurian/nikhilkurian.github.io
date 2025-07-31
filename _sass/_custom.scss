@@ -430,9 +430,8 @@ body.night-mode {
 
 .email-scrambled {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
   padding: 1em 1.2em;
   background: linear-gradient(135deg, rgba(44, 82, 130, 0.05) 0%, rgba(26, 54, 93, 0.08) 100%);
   border: 1px solid rgba(44, 82, 130, 0.15);
@@ -452,67 +451,68 @@ body.night-mode {
     transform: translateY(-1px);
   }
   
-  i {
-    color: #2c5282;
-    font-size: 1.1em;
-    opacity: 0.8;
-  }
-  
-  .scrambled-text {
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    font-family: 'Courier New', monospace;
-    color: #2d3748;
-    font-size: 0.95em;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  .scrambled-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    i {
+      color: #2c5282;
+      font-size: 1.1em;
+      opacity: 0.8;
+    }
+    
+    .scrambled-text {
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      font-family: 'Courier New', monospace;
+      color: #2d3748;
+      font-size: 0.95em;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
-.unscramble-btn {
-  background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%) !important;
-  border: 1px solid rgba(49, 130, 206, 0.3) !important;
-  border-radius: 8px !important;
-  padding: 0.5em 1em !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 6px !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  color: white !important;
-  font-size: 0.85em !important;
-  font-weight: 600 !important;
-  font-family: inherit !important;
-  min-height: 36px !important;
-  flex-shrink: 0 !important;
-  box-shadow: 0 2px 6px rgba(49, 130, 206, 0.2) !important;
+.unscramble-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #6b7280;
+  font-size: 0.75em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.3em 0;
+  border-radius: 4px;
+  opacity: 0.7;
   
   &:hover {
-    background: linear-gradient(135deg, #2c5282 0%, #3182ce 100%) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3) !important;
-    border-color: rgba(49, 130, 206, 0.5) !important;
-  }
-  
-  &:active {
-    transform: translateY(0) !important;
-    box-shadow: 0 2px 6px rgba(49, 130, 206, 0.2) !important;
+    color: #3182ce;
+    opacity: 1;
+    text-decoration: none;
+    background: rgba(49, 130, 206, 0.1);
   }
   
   &:focus {
-    outline: none !important;
-    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2) !important;
+    outline: none;
+    color: #3182ce;
+    opacity: 1;
   }
   
   i {
-    font-size: 0.9em !important;
-    transition: transform 0.3s ease !important;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
   }
   
   span {
-    font-weight: 600 !important;
-    letter-spacing: 0.5px !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: lowercase;
+  }
+  
+  &:hover i {
+    transform: scale(1.1);
   }
 }
 
@@ -577,19 +577,19 @@ body.night-mode {
     }
   }
   
-  .unscramble-btn {
-    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%) !important;
-    border-color: rgba(96, 165, 250, 0.4) !important;
-    box-shadow: 0 2px 6px rgba(96, 165, 250, 0.25) !important;
+  .unscramble-link {
+    color: #9ca3af;
+    opacity: 0.8;
     
     &:hover {
-      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%) !important;
-      box-shadow: 0 4px 12px rgba(96, 165, 250, 0.35) !important;
-      border-color: rgba(96, 165, 250, 0.6) !important;
+      color: #60a5fa;
+      background: rgba(96, 165, 250, 0.15);
+      opacity: 1;
     }
     
-    span {
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    &:focus {
+      color: #60a5fa;
+      opacity: 1;
     }
   }
   
@@ -1811,32 +1811,35 @@ body.night-mode .updates-list .update-item::before {
   .email-scrambled {
     padding: 0.8em 1em;
     font-size: 0.85em;
-    gap: 8px;
+    gap: 6px;
     margin: 0.6em 0;
     
-    .scrambled-text {
-      font-size: 0.8em;
-      letter-spacing: 1px;
-    }
-    
-    i {
-      font-size: 1em;
+    .scrambled-content {
+      gap: 6px;
+      
+      .scrambled-text {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+      }
+      
+      i {
+        font-size: 1em;
+      }
     }
   }
   
-  .unscramble-btn {
-    padding: 0.4em 0.8em;
-    font-size: 0.8em;
-    min-height: 32px;
-    gap: 4px;
+  .unscramble-link {
+    font-size: 0.7em;
+    padding: 0.2em 0;
+    gap: 3px;
     
     span {
-      font-size: 0.8em;
-      letter-spacing: 0.3px;
+      font-size: 0.7em;
+      letter-spacing: 0.2px;
     }
     
     i {
-      font-size: 0.85em;
+      font-size: 0.75em;
     }
   }
   
