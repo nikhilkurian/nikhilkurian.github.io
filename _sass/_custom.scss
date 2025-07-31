@@ -273,6 +273,8 @@ div.author__avatar img,
   z-index: 10;
   width: 70px; /* Fixed width to prevent shifting */
   justify-content: center;
+  height: 60px !important; /* Match header height */
+  top: 0 !important; /* Ensure it stays at the top */
 }
 
 .toggle-switch-container-header {
@@ -599,6 +601,9 @@ body.night-mode {
   .masthead {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
     border-bottom: 1px solid #333 !important;
+    min-height: 60px !important; /* Same fixed height as light mode */
+    display: flex !important;
+    align-items: center !important;
   }
   
   .greedy-nav {
@@ -607,6 +612,7 @@ body.night-mode {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    height: 60px !important; /* Fixed height to match masthead */
     
     .visible-links {
       display: flex;
@@ -819,9 +825,14 @@ body.night-mode .sidebar .author__name {
   background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%) !important;
   box-shadow: 0 4px 20px rgba(44, 82, 130, 0.2);
   border-bottom: none !important;
+  min-height: 60px !important; /* Fixed height to prevent expansion */
+  display: flex !important;
+  align-items: center !important;
   
   .masthead__inner-wrap {
     background: transparent !important;
+    width: 100% !important;
+    padding: 0.5em 1em !important; /* Consistent padding */
     
     .site-title {
       color: white !important;
@@ -842,6 +853,9 @@ body.night-mode .sidebar .author__name {
   background: transparent !important;
   backdrop-filter: none;
   border-bottom: none;
+  height: 60px !important; /* Fixed height to match masthead */
+  display: flex !important;
+  align-items: center !important;
   
   .visible-links a {
     color: white !important;
@@ -1365,9 +1379,12 @@ body.night-mode .updates-list .update-item::before {
       padding: 0.5em;
     }
     
-    .masthead__menu {
-      padding: 0.5em;
-    }
+      .masthead__menu {
+    padding: 0.5em;
+    height: 60px !important; /* Fixed height */
+    display: flex !important;
+    align-items: center !important;
+  }
     
     .greedy-nav {
       .site-title {
