@@ -429,21 +429,23 @@ body.night-mode {
 }
 
 .email-reveal-btn {
-  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
-  border: 2px solid #2c5282;
-  border-radius: 8px;
-  padding: 0.8em 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 0.9em;
-  font-weight: 600;
-  width: 100%;
-  font-family: inherit;
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%) !important;
+  border: 2px solid #2c5282 !important;
+  border-radius: 8px !important;
+  padding: 0.8em 1.2em !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  color: white !important;
+  font-size: 0.9em !important;
+  font-weight: 600 !important;
+  width: 100% !important;
+  font-family: inherit !important;
+  margin: 0.5em 0 !important;
+  min-height: 44px !important;
   
   &:hover {
     background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
@@ -1007,6 +1009,23 @@ body.night-mode .sidebar .author__name {
 // =============================================================================
 // Professional Sidebar - Consistent Left Positioning
 // =============================================================================
+
+// Force author URLs to always be visible
+.author__urls {
+  display: block !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  z-index: auto !important;
+  
+  &:before,
+  &:after {
+    display: none !important;
+  }
+}
 
 // Global sidebar positioning - Force left positioning on all pages
 .sidebar,
