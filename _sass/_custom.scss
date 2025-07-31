@@ -420,6 +420,113 @@ body.night-mode {
 }
 
 // =============================================================================
+// Email Reveal Styling
+// =============================================================================
+
+.email-reveal-container {
+  position: relative;
+  width: 100%;
+}
+
+.email-reveal-btn {
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  border: 2px solid #2c5282;
+  border-radius: 8px;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 600;
+  width: 100%;
+  font-family: inherit;
+  
+  &:hover {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.3);
+  }
+  
+  i {
+    font-size: 1em;
+    transition: transform 0.3s ease;
+  }
+  
+  .email-text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+}
+
+.email-revealed {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8em 1.2em;
+  background: rgba(44, 82, 130, 0.1);
+  border: 2px solid rgba(44, 82, 130, 0.2);
+  border-radius: 8px;
+  color: #2c5282;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  
+  a {
+    color: #2c5282;
+    text-decoration: none;
+    font-weight: 600;
+    
+    &:hover {
+      color: #1a365d;
+      text-decoration: underline;
+    }
+  }
+  
+  i {
+    color: #2c5282;
+  }
+}
+
+// Dark mode styles for email reveal
+body.night-mode {
+  .email-reveal-btn {
+    background: linear-gradient(135deg, #4a9eff 0%, #3a7bd5 100%);
+    border-color: #4a9eff;
+    
+    &:hover {
+      background: linear-gradient(135deg, #3a7bd5 0%, #4a9eff 100%);
+    }
+  }
+  
+  .email-revealed {
+    background: rgba(74, 158, 255, 0.1);
+    border-color: rgba(74, 158, 255, 0.3);
+    color: #4a9eff;
+    
+    a {
+      color: #4a9eff;
+      
+      &:hover {
+        color: #ffffff;
+      }
+    }
+    
+    i {
+      color: #4a9eff;
+    }
+  }
+}
+
+// =============================================================================
 // Sidebar Dark Mode Toggle (Legacy - keeping for reference)
 // =============================================================================
 
@@ -1592,6 +1699,21 @@ body.night-mode .updates-list .update-item::before {
     .toggle-switch-thumb-header {
       transform: translateX(24px);
     }
+  }
+  
+  // Mobile Email Reveal
+  .email-reveal-btn {
+    padding: 0.6em 1em;
+    font-size: 0.85em;
+    
+    .email-text {
+      font-size: 0.85em;
+    }
+  }
+  
+  .email-revealed {
+    padding: 0.6em 1em;
+    font-size: 0.85em;
   }
   
   // =============================================================================

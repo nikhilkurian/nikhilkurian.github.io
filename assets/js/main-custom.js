@@ -236,4 +236,31 @@ $(document).ready(function(){
     }
   });
 
+  // =============================================================================
+  // Email Reveal Functionality
+  // =============================================================================
+  
+  // Global function to reveal email
+  window.revealEmail = function() {
+    const emailBtn = document.querySelector('.email-reveal-btn');
+    const emailRevealed = document.getElementById('emailRevealed');
+    
+    if (emailBtn && emailRevealed) {
+      // Hide the button
+      emailBtn.style.display = 'none';
+      
+      // Show the revealed email with animation
+      emailRevealed.style.display = 'inline-flex';
+      emailRevealed.style.opacity = '0';
+      emailRevealed.style.transform = 'translateY(-10px)';
+      
+      // Animate in
+      setTimeout(() => {
+        emailRevealed.style.transition = 'all 0.3s ease';
+        emailRevealed.style.opacity = '1';
+        emailRevealed.style.transform = 'translateY(0)';
+      }, 10);
+    }
+  };
+
 });

@@ -28,11 +28,19 @@
       {% if author.employer %}
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
       {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
-      {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+        <li>
+          <div class="email-reveal-container">
+            <button class="email-reveal-btn" onclick="revealEmail()">
+              <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 
+              <span class="email-text">Click to reveal email</span>
+            </button>
+            <span class="email-revealed" id="emailRevealed" style="display: none;">
+              <i class="fas fa-fw fa-envelope" aria-hidden="true"></i> 
+              <a href="mailto:{{ author.email }}">{{ author.email }}</a>
+            </span>
+          </div>
+        </li>
       {% endif %}
       {% if author.keybase %}
         <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
