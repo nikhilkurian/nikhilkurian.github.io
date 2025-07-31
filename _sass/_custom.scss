@@ -2354,8 +2354,30 @@ body.night-mode .skills-section {
       display: none !important;
     }
     
-    // Hide the Follow button on mobile
-    .btn--inverse {
+    // Style the Follow button on mobile
+    .follow-btn {
+      display: block !important;
+      margin: 1em auto 0.5em auto !important;
+      padding: 0.5em 1.5em !important;
+      font-size: 0.9em !important;
+      font-weight: 600 !important;
+      background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%) !important;
+      color: white !important;
+      border: none !important;
+      border-radius: 25px !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+      box-shadow: 0 2px 8px rgba(44, 82, 130, 0.2) !important;
+      
+      &:hover {
+        background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3) !important;
+      }
+    }
+    
+    // Hide the old Follow button on mobile
+    .btn--inverse:not(.follow-btn) {
       display: none !important;
     }
   }
@@ -3028,3 +3050,40 @@ body.night-mode {
     }
   }
 } 
+
+// =============================================================================
+// Follow Button Styling
+// =============================================================================
+
+.follow-btn {
+  display: block;
+  margin: 1em auto 0.5em auto;
+  padding: 0.6em 1.8em;
+  font-size: 0.9em;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(44, 82, 130, 0.2);
+  
+  &:hover {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+  }
+}
+
+// Dark mode styling for Follow button
+body.night-mode .follow-btn {
+  background: linear-gradient(135deg, #4a9eff 0%, #2c5282 100%) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(74, 158, 255, 0.3) !important;
+  
+  &:hover {
+    background: linear-gradient(135deg, #2c5282 0%, #4a9eff 100%) !important;
+    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.4) !important;
+  }
+}
