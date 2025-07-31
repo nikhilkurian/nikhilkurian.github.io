@@ -186,14 +186,13 @@ $(document).ready(function(){
   
   // Check for saved night mode preference or default to light mode
   const currentTheme = localStorage.getItem('nightMode') || 'light';
-  const nightModeToggleSidebar = document.getElementById('nightModeToggleSidebar');
-  const nightModeIconSidebar = document.getElementById('nightModeIconSidebar');
+  const nightModeToggleHeader = document.getElementById('nightModeToggleHeader');
   
   // Apply saved theme on page load
   if (currentTheme === 'dark') {
     document.body.classList.add('night-mode');
-    if (nightModeIconSidebar) {
-      nightModeIconSidebar.className = 'fas fa-sun';
+    if (nightModeToggleHeader) {
+      nightModeToggleHeader.checked = true;
     }
   }
   
@@ -208,31 +207,25 @@ $(document).ready(function(){
       // Switch to light mode
       console.log('Switching to light mode');
       body.classList.remove('night-mode');
-      if (nightModeIconSidebar) {
-        nightModeIconSidebar.className = 'fas fa-moon';
-      }
       localStorage.setItem('nightMode', 'light');
     } else {
       // Switch to dark mode
       console.log('Switching to dark mode');
       body.classList.add('night-mode');
-      if (nightModeIconSidebar) {
-        nightModeIconSidebar.className = 'fas fa-sun';
-      }
       localStorage.setItem('nightMode', 'dark');
     }
     console.log('Night mode toggle completed');
   }
   
-  // Add click event listener to sidebar toggle button
-  if (nightModeToggleSidebar) {
-    console.log('Night mode toggle button found');
-    nightModeToggleSidebar.addEventListener('click', function() {
-      console.log('Night mode button clicked');
+  // Add change event listener to header toggle switch
+  if (nightModeToggleHeader) {
+    console.log('Header night mode toggle switch found');
+    nightModeToggleHeader.addEventListener('change', function() {
+      console.log('Header night mode toggle switched');
       toggleNightMode();
     });
   } else {
-    console.log('Night mode toggle button NOT found');
+    console.log('Header night mode toggle switch NOT found');
   }
   
   // Add keyboard shortcut (Ctrl/Cmd + Shift + D)
