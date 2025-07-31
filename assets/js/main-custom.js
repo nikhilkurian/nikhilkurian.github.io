@@ -184,12 +184,18 @@ $(document).ready(function(){
   // Night Mode Toggle Functionality
   // ===========================================================================
   
-  // Check for saved night mode preference or default to light mode
-  const currentTheme = localStorage.getItem('nightMode') || 'light';
+  // Check for saved night mode preference or default to dark mode
+  const currentTheme = localStorage.getItem('nightMode') || 'dark';
   const nightModeToggleHeader = document.getElementById('nightModeToggleHeader');
   
   // Apply saved theme on page load
   if (currentTheme === 'dark') {
+    document.body.classList.add('night-mode');
+    if (nightModeToggleHeader) {
+      nightModeToggleHeader.checked = true;
+    }
+  } else {
+    // Default to dark mode if no preference is saved
     document.body.classList.add('night-mode');
     if (nightModeToggleHeader) {
       nightModeToggleHeader.checked = true;

@@ -955,6 +955,42 @@ body.night-mode .sidebar .author__name {
   background-clip: initial !important;
 }
 
+// Dark mode sidebar icon styling - more professional colors
+body.night-mode .sidebar .author__urls {
+  li a {
+    color: #e2e8f0 !important;
+    
+    &:hover {
+      color: #cbd5e0 !important;
+    }
+    
+    i {
+      color: #94a3b8 !important; // More subtle, professional color
+      
+      &:hover {
+        color: #cbd5e0 !important;
+      }
+    }
+  }
+}
+
+// Dark mode email styling - more professional colors
+body.night-mode .email-revealed a {
+  color: #94a3b8 !important; // More subtle, professional color
+  
+  &:hover {
+    color: #cbd5e0 !important;
+  }
+}
+
+body.night-mode .email-scrambled .reveal-link {
+  color: #94a3b8 !important; // More subtle, professional color
+  
+  &:hover {
+    color: #cbd5e0 !important;
+  }
+}
+
 // =============================================================================
 // Professional Header
 // =============================================================================
