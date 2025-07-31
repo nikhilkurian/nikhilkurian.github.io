@@ -13,10 +13,10 @@ This section covers fundamental concepts in deep learning, computational require
 <div class="archive__item">
   <div class="archive__item-body">
     <h2 class="archive__item-title">
-      <a href="#">Primer on GPU Architecture</a>
+      <a href="/gpu-architecture-accelerated-computing/">Accelerated Computing and GPU Architecture</a>
     </h2>
     <p class="archive__item-excerpt">A comprehensive introduction to GPU architecture fundamentals, exploring CUDA cores, memory hierarchy, and how GPUs are optimized for parallel computing tasks in deep learning.</p>
-    <p class="archive__item-date"><strong>Published:</strong> Coming Soon</p>
+    <p class="archive__item-date"><strong>Published:</strong> July 22, 2025</p>
   </div>
 </div>
 
