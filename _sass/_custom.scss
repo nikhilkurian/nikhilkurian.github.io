@@ -1880,6 +1880,8 @@ body.night-mode .updates-list .update-item::before {
   
   .skills-header {
     margin-bottom: 0.6em;
+    color: #2d3748 !important; // Ensure dark text for good contrast
+    font-weight: 600 !important; // Make text more prominent
     
     picture {
       display: block;
@@ -1912,9 +1914,27 @@ body.night-mode .updates-list .update-item::before {
   }
 }
 
+// Light mode specific styling for better mobile visibility
+body:not(.night-mode) .skills-section {
+  .skills-header {
+    color: #1a202c !important; // Very dark text for maximum contrast
+    font-weight: 700 !important; // Bold text for better visibility
+    text-shadow: none !important; // Remove any text shadows that might cause fading
+  }
+  
+  .skills-badges {
+    img {
+      filter: none !important; // Ensure no filters are applied that might cause fading
+    }
+  }
+}
+
 // Dark mode styles for skills section
 body.night-mode .skills-section {
   .skills-header {
+    color: #e0e0e0 !important; // Light text for dark mode
+    font-weight: 600 !important;
+    
     picture {
       img {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -2144,32 +2164,20 @@ body.night-mode .skills-section {
   .masthead {
     .greedy-nav {
       .greedy-nav__toggle {
-        margin-right: 100px !important; /* More space for dark mode toggle */
-        position: relative !important;
-        z-index: 1000 !important;
-      }
-      
-      .visible-links {
-        a {
-          color: #333 !important; /* Dark color for light mode visibility */
-          
-          &:hover {
-            color: #000 !important;
-          }
-        }
+        margin-right: 80px !important; /* Give space for dark mode toggle */
       }
     }
   }
   
   .header-dark-mode-toggle {
     position: absolute !important;
-    right: 0.5em !important;
+    right: 1em !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
-    width: 50px !important;
-    z-index: 1002 !important; /* Higher than other elements */
+    width: 60px !important;
+    z-index: 1001 !important; /* Ensure it's above other elements */
   }
   
   .toggle-switch-label-header {
@@ -2331,6 +2339,27 @@ body.night-mode .skills-section {
       font-size: 0.8em;
     }
   }
+  
+  // Mobile skills section - ensure maximum visibility
+  .skills-section {
+    .skills-header {
+      color: #000000 !important; // Pure black for maximum contrast on mobile
+      font-weight: 800 !important; // Extra bold for mobile
+      font-size: 1.1em !important; // Slightly larger font
+      text-shadow: none !important;
+      -webkit-text-fill-color: #000000 !important; // Force black text
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      background-clip: initial !important;
+    }
+    
+    .skills-badges {
+      img {
+        filter: none !important;
+        opacity: 1 !important;
+      }
+    }
+  }
 }
 
 // =============================================================================
@@ -2363,6 +2392,15 @@ body.night-mode .skills-section {
     
     .card-content {
       padding: 1.5em;
+    }
+  }
+  
+  // Tablet skills section - ensure good visibility
+  .skills-section {
+    .skills-header {
+      color: #1a202c !important; // Very dark text for good contrast
+      font-weight: 700 !important; // Bold text
+      font-size: 1.05em !important; // Appropriate font size
     }
   }
 } 
@@ -2809,21 +2847,14 @@ body.night-mode {
       
       .skills-header {
         color: #e0e0e0 !important;
-        
-        picture {
-          img {
-            filter: brightness(0) invert(1) !important; /* Make text white in dark mode */
-          }
-        }
       }
       
       .skills-badges {
         background-color: #1a1a1a !important;
       }
     }
-  }
-  
-  .updates-list {
+    
+    .updates-list {
       .update-item {
         .update-date {
           background-color: #2a2a2a !important;
@@ -2892,14 +2923,3 @@ body.night-mode {
     }
   }
 } 
-
-// Light mode skills section - ensure headings are visible
-.skills-section {
-  .skills-header {
-    picture {
-      img {
-        filter: none !important; /* No filter in light mode - keep original colors */
-      }
-    }
-  }
-}
