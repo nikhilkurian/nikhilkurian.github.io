@@ -1584,16 +1584,21 @@ body.night-mode .updates-list .update-item::before {
   
   .masthead {
     padding: 0.5em 1em;
+    min-height: 60px !important;
     
     .masthead__inner-wrap {
       padding: 0.5em;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
     
-      .masthead__menu {
-    padding: 0.5em;
-    height: 60px !important; /* Fixed height */
-    display: flex !important;
-    align-items: center !important;
+    .masthead__menu {
+      padding: 0.5em;
+      height: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+    }
   }
     
     .greedy-nav {
@@ -1602,7 +1607,20 @@ body.night-mode .updates-list .update-item::before {
       }
       
       .visible-links {
-        display: none;
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        align-items: center;
+        
+        li {
+          margin: 0;
+          
+          a {
+            font-size: 0.85em;
+            padding: 0.3em 0.6em;
+            white-space: nowrap;
+          }
+        }
       }
       
       .hidden-links {
@@ -1644,6 +1662,23 @@ body.night-mode .updates-list .update-item::before {
     position: relative !important;
     left: auto !important;
     right: auto !important;
+    
+    .author__avatar {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin-bottom: 1em !important;
+      
+      img {
+        display: block !important;
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 3px solid rgba(44, 82, 130, 0.2) !important;
+        box-shadow: 0 4px 12px rgba(44, 82, 130, 0.15) !important;
+      }
+    }
     
     .author__name {
       font-size: 1.2em;
@@ -1923,13 +1958,31 @@ body.night-mode .updates-list .update-item::before {
   .masthead {
     padding: 0.3em 0.5em;
     
-    .greedy-nav .site-title {
-      font-size: 1.1em;
+    .greedy-nav {
+      .site-title {
+        font-size: 1.1em;
+      }
+      
+      .visible-links {
+        gap: 0.3em;
+        
+        li a {
+          font-size: 0.75em;
+          padding: 0.2em 0.4em;
+        }
+      }
     }
   }
   
   .sidebar {
     padding: 1em !important;
+    
+    .author__avatar {
+      img {
+        width: 100px !important;
+        height: 100px !important;
+      }
+    }
     
     .author__name {
       font-size: 1.1em;
