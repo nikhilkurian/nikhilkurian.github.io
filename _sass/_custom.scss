@@ -889,7 +889,8 @@ body.night-mode {
   
   // Cards
   .about-card,
-  .updates-card {
+  .updates-card,
+  .skills-card {
     background-color: #2d2d2d !important;
     border: 1px solid #444 !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
@@ -914,6 +915,25 @@ body.night-mode {
             color: #ffffff !important;
             text-decoration-color: #66d9ff;
           }
+        }
+      }
+    }
+  }
+  
+  // Skills sections in dark mode
+  .skills-section {
+    .skills-header {
+      picture img {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+      }
+    }
+    
+    .skills-badges {
+      img {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+        
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
         }
       }
     }
@@ -1394,8 +1414,9 @@ a {
 // Home Page Cards - About Me & Recent Updates
 // =============================================================================
 
-.about-card,
-.updates-card {
+  .about-card,
+  .updates-card,
+  .skills-card {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(44, 82, 130, 0.08);
@@ -1466,6 +1487,107 @@ a {
           color: #1a365d;
           text-decoration: underline;
         }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// Skills Card Styling
+// =============================================================================
+
+.skills-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(44, 82, 130, 0.08);
+  margin-bottom: 2em;
+  border: 1px solid rgba(44, 82, 130, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 82, 130, 0.12);
+    border-color: rgba(44, 82, 130, 0.15);
+  }
+  
+  .card-header {
+    background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+    padding: 1em 1.5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+    }
+    
+    h2 {
+      margin: 0;
+      color: white;
+      font-size: 1.2em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+      letter-spacing: 0.5px;
+      
+      i {
+        font-size: 1em;
+        opacity: 0.9;
+      }
+    }
+  }
+  
+  .card-content {
+    padding: 1.5em;
+  }
+}
+
+.skills-section {
+  margin-bottom: 2.5em;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  .skills-header {
+    margin-bottom: 1em;
+    text-align: center;
+    
+    picture {
+      display: block;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(44, 82, 130, 0.1);
+      }
+    }
+  }
+  
+  .skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      height: 28px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
     }
   }
@@ -1721,7 +1843,8 @@ body.night-mode .updates-list .update-item::before {
   // =============================================================================
   
   .about-card,
-  .updates-card {
+  .updates-card,
+  .skills-card {
     margin-bottom: 1.5em;
     border-radius: 8px;
     
@@ -2010,6 +2133,46 @@ body.night-mode .updates-list .update-item::before {
     
     .card-content {
       padding: 1em;
+    }
+  }
+  
+  .skills-section {
+    margin-bottom: 1.5em;
+    
+    .skills-header {
+      margin-bottom: 0.6em;
+      
+      picture img {
+        max-width: 250px;
+      }
+    }
+    
+    .skills-badges {
+      gap: 0.5em;
+      
+      img {
+        height: 22px;
+      }
+    }
+  }
+  
+  .skills-section {
+    margin-bottom: 2em;
+    
+    .skills-header {
+      margin-bottom: 0.8em;
+      
+      picture img {
+        max-width: 280px;
+      }
+    }
+    
+    .skills-badges {
+      gap: 0.6em;
+      
+      img {
+        height: 24px;
+      }
     }
   }
   
