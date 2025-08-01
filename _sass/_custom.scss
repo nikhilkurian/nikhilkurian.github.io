@@ -3384,3 +3384,108 @@ body.night-mode .follow-link {
 body.night-mode .follow-link:hover {
   background: #718096;
 }
+
+// =============================================================================
+// Hide Dark Mode Toggle on Mobile
+// =============================================================================
+
+@media (max-width: 768px) {
+  .header-dark-mode-toggle {
+    display: none !important;
+  }
+  
+  // Also hide any other dark mode toggles that might be in the header
+  .toggle-switch-container-header {
+    display: none !important;
+  }
+  
+  .toggle-switch-input-header {
+    display: none !important;
+  }
+  
+  .toggle-switch-label-header {
+    display: none !important;
+  }
+}
+
+// =============================================================================
+// Desktop Sidebar Restoration & Mobile Follow Button
+// =============================================================================
+
+// Desktop: Restore original sidebar layout
+@media (min-width: 769px) {
+  // Hide follow button on desktop
+  .follow-btn {
+    display: none !important;
+  }
+  
+  // Restore sidebar layout
+  .sidebar,
+  .sidebar__right {
+    width: auto !important;
+    max-width: none !important;
+    float: right !important;
+    margin: 0 0 0 1.5em !important;
+    padding: 1.5em !important;
+    order: unset !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    display: block !important;
+  }
+  
+  // Restore main content layout
+  #main {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.5em !important;
+    width: 100% !important;
+  }
+  
+  // Restore author content layout
+  .author__content {
+    display: block !important;
+    flex-direction: unset !important;
+    align-items: unset !important;
+    text-align: left !important;
+    width: auto !important;
+  }
+}
+
+// Mobile: Show follow button and hide sidebar
+@media (max-width: 768px) {
+  // Show follow button on mobile
+  .follow-btn {
+    display: block !important;
+    margin: 1em auto 0.5em auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: fit-content !important;
+    max-width: 200px !important;
+  }
+  
+  // Hide sidebar on mobile
+  .sidebar,
+  .sidebar__right {
+    display: none !important;
+  }
+  
+  // Force main content to be full width on mobile
+  #main {
+    display: block !important;
+    flex-direction: column !important;
+    gap: 1em !important;
+    width: 100% !important;
+  }
+  
+  // Center author content on mobile
+  .author__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
+// =============================================================================

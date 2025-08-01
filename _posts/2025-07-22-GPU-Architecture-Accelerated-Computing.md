@@ -4,6 +4,7 @@ date: 2025-07-22
 categories: [AI, GPU, Deep Learning, Computing]
 tags: [GPU, CUDA, Deep Learning, Accelerated Computing, NVIDIA, Memory Hierarchy]
 permalink: /gpu-architecture-accelerated-computing/
+excerpt: "A comprehensive guide to GPU architecture fundamentals, exploring CUDA cores, memory hierarchy, and optimization techniques for deep learning workloads."
 ---
 
 # **Accelerated Computing and GPU Architecture**

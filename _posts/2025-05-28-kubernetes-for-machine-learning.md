@@ -1,11 +1,9 @@
 ---
-title: "Kubernetes for ML Engineers: A Practical Introduction"
+title: "Kubernetes for Machine Learning: Orchestrating ML Workloads"
 date: 2025-05-28
 categories: [ml-infrastructure]
-tags: [kubernetes, containerization, mlops, deployment, orchestration, gpu]
-header:
-  teaser: /images/500x300.png
-excerpt: "A practical introduction to Kubernetes for machine learning engineers, covering core concepts, deployment strategies, and best practices for managing ML workloads."
+tags: [kubernetes, mlops, orchestration, deployment, scaling, containers]
+excerpt: "A practical introduction to Kubernetes for machine learning engineers, covering core concepts, deployment strategies, and best practices for managing ML workloads at scale."
 ---
 
 # Kubernetes for ML Engineers: Understanding YAML from the Ground Up

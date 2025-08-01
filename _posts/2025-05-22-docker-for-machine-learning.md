@@ -3,9 +3,7 @@ title: "Docker for Machine Learning: A Beginner-Friendly Guide"
 date: 2025-05-22
 categories: [ml-infrastructure]
 tags: [docker, containerization, mlops, deployment, gpu, nvidia]
-header:
-  teaser: /images/500x300.png
-excerpt: "Learn how to use Docker for machine learning workflows, from basic containerization to GPU-accelerated deep learning training."
+excerpt: "Learn how to use Docker for machine learning workflows, from basic containerization to GPU-accelerated deep learning training and deployment."
 ---
 
 # Docker for Machine Learning: A Beginner-Friendly Guide
