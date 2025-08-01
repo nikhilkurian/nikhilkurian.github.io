@@ -363,7 +363,7 @@ $(document).ready(function(){
                              <div class="follow-popup-body">
                    <p>Follow me to know more about my activities</p>
                    <div class="follow-popup-links">
-                     <a href="https://linkedin.com/in/nikhilkurian" target="_blank" class="follow-link">
+                     <a href="https://www.linkedin.com/in/nikhil-cherian-kurian-7bba285b" target="_blank" class="follow-link">
                        <i class="fab fa-linkedin"></i> LinkedIn
                      </a>
                      <a href="https://github.com/nikhilkurian" target="_blank" class="follow-link">
